@@ -12,7 +12,7 @@ This chapter provides a detail description and insight into the derivation of th
 
 \section{Designing the Schematics}
 
-	All of the following schematics that will be mentioned in this section were designed using Altium Designer 18. The use of component datasheets and online tutorials aided in the design as well as input from the Academic Supervisor. Most of the schematic and PCB models were either downloaded from the manufacturer's website or from SnapEDA. The following paragraphs will give an overview of the various schematics and why they were designed and for what purpose they have with the MEGA65 phone.
+	All of the following schematics that will be mentioned in this section were designed using Altium Designer 18. The use of component data sheets and online tutorials aided in the design as well as input from the Academic Supervisor. Most of the schematic and PCB models were either downloaded from the manufacturer's website or from SnapEDA. The following paragraphs will give an overview of the various schematics and why they were designed and for what purpose they have with the MEGA65 phone.
 
 \subsection{FPGA Pins}
 \label{chap:FPGA}
@@ -26,15 +26,15 @@ The schematic of the component was designed for the project while the footprint 
 
 	The circuitry was connected up by first connecting a slide switch between the shutdown and power lines of the voltage regulator. An LED was then connected to the output line to ensure that if the regulator was powered an LED would illuminate, with the output line producing the required power rail needed. This was repeated six times to create the multiple power rails required for all the different components.\\
 
-	There were a few changes made to the power control circuitry after going through and analysing all the schematics. It was found that the voltage regulator would only give out 0.1A of current wheras the modems would need at least 2A of current, 4A at best. The circuitry was updated to include the new part found so that the output current would be adequate for the modems. 
+	There were a few changes made to the power control circuitry after going through and analysing all the schematics. It was found that the voltage regulator would only give out 0.1A of current whereas the modems would need at least 2A of current, 4A at best. The circuitry was updated to include the new part found so that the output current would be adequate for the modems. 
 
 \subsection{Charging Circuitry}
 
-	Parts of the schematic for the charging circuit were already completed by a student in a previous year. The schematic was checked over for errors and against the datasheet of the main component so that everything would work as expected. It was decided early on that the majority of this schematic would be completed by a professional, due to its complexity.
+	Parts of the schematic for the charging circuit were already completed by a student in a previous year. The schematic was checked over for errors and against the data sheet of the main component so that everything would work as expected. It was decided early on that the majority of this schematic would be completed by a professional, due to its complexity.
 
 \subsection{Voltage Step-Up}
 
-	The Voltage Step-up was required as a few of the components require 5V. This was completed by using an NCP1402 and connecting VCC MIC to the input voltage line. The rest of the circuitry was completed by following the recommended layout in the datasheet. The use of the NCP1402 was based on a recommendation written in a past student's thesis, with the component being verified for its usability in the phone. 
+	The Voltage Step-up was required as a few of the components require 5V. This was completed by using an NCP1402 and connecting VCC MIC to the input voltage line. The rest of the circuitry was completed by following the recommended layout in the data sheet. The use of the NCP1402 was based on a recommendation written in a past student's thesis, with the component being verified for its usability in the phone. 
 
 \subsection{Signal Connections}
 
@@ -47,7 +47,7 @@ The I/O Expanders were added into the schematics to allow the device to have mor
 
 \subsection{VGA Connection}
 \label{chap:VGA}
-	The VGA was connected using a 15-Pin DSUB connector. A resistor ladder was used for the colour connections with the signals going straight out to the FPGA board. Resistor values of 4k, 2k and 510 Ohms were used for the ladder with two 0 Ohm resistors used for the HSYNC and VSYNC lines. The datasheet for the VGA connection was used as a basis for the signal connections. 
+	The VGA was connected using a 15-Pin DSUB connector. A resistor ladder was used for the colour connections with the signals going straight out to the FPGA board. Resistor values of 4k, 2k and 510 Ohms were used for the ladder with two 0 Ohm resistors used for the HSYNC and VSYNC lines. The data sheet for the VGA connection was used as a basis for the signal connections. 
  
 \subsection{LCD Display}
 \label{chap:LCD}
@@ -55,29 +55,29 @@ The I/O Expanders were added into the schematics to allow the device to have mor
 
 \subsection{Touch Screen}
 \label{chap:touch}
-	The Touch Screen was added to the schematic to give the ability to the user to use their fingers for functionality, as well as the thumbpad and buttons. 
+	The Touch Screen was added to the schematic to give the ability to the user to use their fingers for functionality, as well as the thumb-pad and buttons. 
 The Touch Screen connection was completed by powering it with VCC Screen and adding in I2C signals and an Interrupt line, going to the Signal Connections sheet.
 
-\subsection{LED Backlight Display}
+\subsection{LED Back-light Display}
 
-	The LED Backlit Display was designed using a simplified design already created by another producer. This circuit was designed to provide a backlit display when the phone is on and to dim the screen when the phone is in a call or facing down.
+	The LED Back lit Display was designed using a simplified design already created by another producer. This circuit was designed to provide a back lit display when the phone is on and to dim the screen when the phone is in a call or facing down.
 
 \subsection{Accelerometer}
 \label{chap:a}
-	The accelerometer was designed mainly through reading the recommended application layout in the datasheet of the component. Off-sheet connectors were used for the I2C signals and the Interrupt lines, as well as the three ADC lines which were used for the volume thumbwheel. The power for the component was connected to the VCC MIC power rail.
+	The accelerometer was designed mainly through reading the recommended application layout in the data sheet of the component. Off-sheet connectors were used for the I2C signals and the Interrupt lines, as well as the three ADC lines which were used for the volume thumb wheel. The power for the component was connected to the VCC MIC power rail.
 
 \subsection{Real-Time Clock}
 \label{chap:RTC}
-	The schematic connections for the RTC were made by following the typical application layout given in the manufacturer's datasheet.
+	The schematic connections for the RTC were made by following the typical application layout given in the manufacturer's data sheet.
 
 \subsection{Proximity Sensor}
 \label{chap:prox}
-	The schematic and PCB models for the Proximity Sensor were accessed from the internet with all the connections followed from the manufacturer's datasheet. 
+	The schematic and PCB models for the Proximity Sensor were accessed from the internet with all the connections followed from the manufacturer's data sheet. 
 
 \subsection{4G Modems}
 \label{chap:modem}
 	4G modems were added to the device to enable 4G internet connection. Two 4G modems were added to the schematics so that the user would have the ability to be connected to two different networks at once.
-The schematic for the 4G modem was downloaded off the internet with many of the connections also being read off the manufacturer's datasheet. 
+The schematic for the 4G modem was downloaded off the internet with many of the connections also being read off the manufacturer's data sheet. 
 
 \subsection{WiFi Module}
 
@@ -89,15 +89,15 @@ The schematic for the 4G modem was downloaded off the internet with many of the 
 
 \subsection{Barometer}
 
-	The schematic connections for the Barometer were completed by following the recommended layout given on the manufacturer's datasheet. 
+	The schematic connections for the Barometer were completed by following the recommended layout given on the manufacturer's data sheet. 
 
 \subsection{LoRa Radio}
 
-	The two LoRa Radios were connected up using the recommended application layout given by the manufacturer's datasheet. The UART connections were made directly to the FPGA pins.
+	The two LoRa Radios were connected up using the recommended application layout given by the manufacturer's data sheet. The UART connections were made directly to the FPGA pins.
 
 \subsection{MEMs Microphones}
 \label{chap:mics}
-	The two MEMs Microphones were connected by following the datasheet's guidelines. The individual data lines were sent straight to the FPGA, while the two clock lines were tied together and sent to the FPGA board. 
+	The two MEMs Microphones were connected by following the data sheet's guidelines. The individual data lines were sent straight to the FPGA, while the two clock lines were tied together and sent to the FPGA board. 
 
 \subsection{Headphone Audio Filter} 
 \label{chap:audio2}
@@ -115,7 +115,7 @@ Like many of the other components the signal connections on the schematic were w
 \subsection{Bluetooth Module}
 
 	The Bluetooth module was added into the schematic to ensure that the device would be compatible with Bluetooth. This would allow the user to connect to a third-party peripheral device.
-The circuitry for the Bluetooth module was created by following the recommend layout on the component's datasheet. The UART and PCM connections were made directly to FPGA pins. 
+The circuitry for the Bluetooth module was created by following the recommend layout on the component's data sheet. The UART and PCM connections were made directly to FPGA pins. 
 
 \subsection{SIM Card Connection}
 \label{chap:SIM}
@@ -147,7 +147,7 @@ It was decided early on that (where possible) that all resistors and capacitors 
 \subsubsection{TPS6302x High Efficiency Single Inductor Buck-Boost Converter}
 
 It was proposed early on that multiple Texas Instruments TPS6302x High Efficiency Single Inductor Buck-Boost Converters with 4-A Switches would be used as the power supply. One was designed for both of the cellular radios, one to power WiFi and Bluetooth, one for the FPGA board, one connected to the battery source and two for the modems. 
-This option was given priority over the other power supplys due to it having a 2A enable line, and after analysing the other power supply options was used as the power supply option. 
+This option was given priority over the other power supplies due to it having a 2A enable line, and after analysing the other power supply options was used as the power supply option. 
 
 
 \subsubsection{CDMA Cellular/PCS System Power Supplies}
@@ -160,12 +160,12 @@ The LP2951 voltage regulator was chosen as the regulator due to it having a low 
 
 \subsubsection{LP2951-N Adjustable Micropower Voltage Regulator}
 
-The LP2951 voltage regulator was chosen intially as the regulator due to it having a low quiescent current and a low dropout voltage. It was also chosen as it was readily available and easy to obtain. The regulator also is ideally suited to work in battery-powered systems. Later on in the project it was found that the regulator didn't provide enough current to supply to the Wi-Fi module and the modems, because of this an alternative was found which would supply the correct current.
+The LP2951 voltage regulator was chosen initially as the regulator due to it having a low quiescent current and a low dropout voltage. It was also chosen as it was readily available and easy to obtain. The regulator also is ideally suited to work in battery-powered systems. Later on in the project it was found that the regulator didn't provide enough current to supply to the WiFi module and the modems, because of this an alternative was found which would supply the correct current.
 
 
 \subsubsection{TPS63805 High Current, High Efficiency Single Inductor Buck-Boost Converter}
 
-After discovering that the LP2951 voltage regulator wouldn't be sufficient for the project the TPS63805 was chosen instead as it would provide a high enough current to be able to work with both the two modems and the Wi-Fi module. However, this module was in DSBGA form and was unsuitable for the device due to its soldering requirements. 
+After discovering that the LP2951 voltage regulator wouldn't be sufficient for the project the TPS63805 was chosen instead as it would provide a high enough current to be able to work with both the two modems and the WiFi module. However, this module was in DSBGA form and was unsuitable for the device due to its soldering requirements. 
 
 
 %----------------------------------------------------------------------------------------
@@ -180,7 +180,7 @@ After discovering that the LP2951 voltage regulator wouldn't be sufficient for t
 %	SUBSECTION 4
 %----------------------------------------------------------------------------------------
 
-\subsection{Wi-Fi Module}
+\subsection{WiFi Module}
 \subsubsection{}
 		This module was also chosen based upon research completed by other students in previous reports. Again, this module was already being used in the bench-top prototype and familiar with the software being developed for it. 
 
