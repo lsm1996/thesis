@@ -177,8 +177,22 @@ headsepline, % Uncomment to get a line under the header
 %----------------------------------------------------------------------------------------
 
 \begin{abstract}
-\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
-This thesis follows the process and findings in the design of the PCB for the MEGA 65 Secure Phone project. This thesis answers the research questions relating to the functional and hardware requirements needed to design a phone which is entirely secure. The thesis also follows the creation and testing of the schematics, including the process in which they were designed. Component selections, footprint designs and PCB designs are also included in the thesis as well as the process and reasoning behind all the designs. Through completing the project it was found that a highly secure device, in terms of being verifiable, could be produced by using components available on the market, and through testing it was found that it would be compatible with the MEGA 65 software. It was also found that, due to vast majority of components and the size of the phone, the PCB will be highly complex and require advanced knowledge in PCB design.  \ldots
+  \addchaptertocentry{\abstractname} % Add the abstract to the table of contents
+  The security of modern smart-phones and computers is impossible to guarantee or to assume due to the out-of-control complexity of
+  these devices.  The MEGA65 project seeks to address this by creating simple computing and communications devices that remain
+  sufficiently useful in practice. The MEGA65 phone is designed around an open and simple architecture that are simple
+  enough to allow highly secure operation.  This requires the ability to isolate, and when necessary de-energise, untrustable
+  components like the cellular modem.  This thesis documents the process of developing a schematic and initial printed circuit board
+  layout for the MEGA65 phone.  This included elucidation of the functional requirements, selection of hardware components and
+  architectural elements that can support those functional requirements, as well development of the circuits to implement each, the
+  incorporation of those circuits into a complete schematic design, and the transformation of that schematic design into a printed
+  circuit board layout that can be manufactured to form the core of fully functional prototypes of the MEGA65 phone.
+  This is made possible in part by targeting a hand-held game-console form-factor, to avoid the need to for extreme miniaturisation,
+  which significantly reduces the design effort and cost of manufacturing prototype devices.  Low-cost iteration of the design is
+  supported by using a removeable FPGA module, so that the circuit board can be refined without the cost and complexity of purchasing
+  and attaching a large BGA part to the main circuit board.  The result is a circuit board that is sufficiently affordable and
+  manufacturable to support the future stages of the MEGA65 phone project, without compromising on satisfaction of the functional
+  requirements. 
 \end{abstract}
 
 %----------------------------------------------------------------------------------------
