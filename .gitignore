@@ -1,0 +1,13 @@
+*.aux
+*.log
+*.bbl
+MEGAphoneSchematics.pdf
+cpu-complexity/cpucomplexity.pdf
+main.pdf
+place-holders/kitty.pdf
+cpu-complexity/foo
+main.blg
+main.lof
+main.lot
+main.out
+main.toc
