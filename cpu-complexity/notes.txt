@@ -1,0 +1,6 @@
+all workforce size numbers for Intel from their annual reports
+which processors affected from https://www.techarp.com/guides/complete-meltdown-spectre-cpu-list/6/
+MOS 6502 used nine designers inferred from http://www.commodore.ca/gallery/magazines/misc/mos_605x_team_eetimes_august_1975.pdf
+
+Notes on network complexity, including "The more complex the network, the more likely a security rule can be bypassed" http://conferences.sigcomm.org/co-next/2009/workshops/rearch/papers/Behringer.pdf
+there are estimators of proccesor design complexity, e.g., https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1540961, however they are tailored for use by the designers, not external examiners.
