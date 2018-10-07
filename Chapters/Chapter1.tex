@@ -17,24 +17,22 @@ Whereas traditionally these security vulnerabilities have existed primarily in s
 Indeed, the complexity of the {\em errata} for a modern processor is now often longer\todo{cite a recent Intel errata document, making sure it is longer than the 6502 data sheet} than the entire specification of early generation processors \todo{cite 6502 datasheet}.
 Whereas software vulnerabilities can be quickly and economically patched, this is not always the case for hardware-based vulnerabilities, as it may require replacement of the defective hardware\todo{add citation}.  
 
+        Modern computers are designed to achieve increasing performance and functionality through the easiest route.
+        This is typically done by adding in extra layers of logic, consequently increasing sophistication and complicating the system.
+        The processors of these modern computers are optimised using speculative execution, which is a technique used by high-speed processors in order to increase performance by guessing future likely execution paths \cite{RN16}.
+        This complexity however can be detrimental to security, because it becomes increasingly difficult and expensive to verify the correct operation of these more complicated devices.
+        This is not merely a theoretical problem: There have been a number of recent cases where vulnerabilities have been exploited, in specific the Spectre and Meltdown hardware attacks, and the Via C3 ``god mode'' bit \todo{Cite something like https://www.theregister.co.uk/2018/08/10/via\_c3\_x86\_processor\_backdoor/}.
+
         The recent Spectre \todo{Add citation} and Meltdown \todo{add citation} vulnerabilities are headline examples of this trend and the difficulties that such vulnerabilities create.
         Intel and the other vendors are still struggling to produce patches that do not reduce the reliability or performance of their processors, while mitigating as much of the threat posed by these vulnerabilities as possible\todo{add citation}.
-        At the end of the day, however, the only fully effective solution is for them to develop a new generation of processors that have the defects corrected in the silicon – an extremely expensive and time-consuming process – and even then, it is likely that the performance of those processors will be impaired, precisely because it is performance optimisations that are the direct cause of the vulnerabilities.
-        Further, even if we were to assume that corrected hardware were produced, it too could be found to suffer from one or more hitherto unknown vulnerabilities, and it too require replacement.
-        Put another way, the window of vulnerability for a hardware defect is typically orders of magnitude longer than for a software vulnerability.
+        At the end of the day, the only fully effective solution is for them to develop a new generation of processors that have the defects corrected in the silicon – an extremely expensive and time-consuming process.
+        Even then, it is likely that the performance of those processors will be lower, precisely because it is performance optimisations that are the direct cause of the vulnerabilities.
+        Even if processors are created that correct these known issues, they too could be found to suffer from one or more hitherto unknown vulnerabilities, and themselves require replacement.
         When commerce, personal privacy and security as well as national security depends on the correct and secure operation of computers, we clearly have a problem of considerable importance before us.
 
-        Modern computers are designed to achieve increasing performance and functionality through the easiest route.
-        This is typically done by adding in extra layers of code, consequently increasing sophistication and complicating the system.
-        The processors of these modern computers are optimised using speculative execution, which is a technique used by high-speed processors in order to increase performance by guessing future likely execution paths \cite{RN16}.
-        Unlike older computers, this adds another level of complexity to the computer.
-        This complexity however can be detrimental to security, due to vulnerabilities in the hardware being able to be exploited.
-        There have been a number of recent cases where vulnerabilities have been exploited, in specific the Spectre and Meltdown hardware attacks. 
-
-Spectre attacks involve inducing a victim to speculatively perform operations that would not occur during correct program execution, which consequently leak the victim’s confidential information to the adversary via a side channel \cite{RN16}.  
-Meltdown attacks also break the fundamental isolation between the user applications and the operating system.
-The attack allows a program to access the memory of the affected computer.
-Which in turn can give away secrets of other programs and the operating system \cite{RN3}.\todo{only one sentence per line in the source, please, so that source control tools are MUCH easier to use} 
+        It is precisely this problem of the impossibility of feasibly verifying the security of complex modern devices that is the reason for this project, and it's reconsideration of the merits of simpler, albeit less performant architectures.
+        
+\todo{only one sentence per line in the source, please, so that source control tools are MUCH easier to use} 
 
 
 %-----------------------------------
@@ -42,8 +40,13 @@ Which in turn can give away secrets of other programs and the operating system \
 %-----------------------------------
 \section{The MEGA65\todo{It should stay ``MEGA65'' everywhere, not ``MEGA 65'', since ``MEGA65'' is the name of the computer} Project}
 
-	The overall project aim is to create a secure smartphone based on a purposely simple architecture, that is capable of basic telephony functions and simple productivity tasks. Where a trade-off must be made between security and richness of functions, the trade-offs will tend to the secure side. The sufficiently functional system’s architecture will be based on the Commodore 64 computer, to ensure that the device is secure as well as allowing its existing productivity software, tools and developer base and knowledge to be leveraged. 
-	The MEGA65 project was created to develop the unreleased Commodore 65 (C65). Collaborators from all around the world build pieces of the puzzle. The recreated system is 50 times faster than the original Commodore 64 and is an exact replica of the original C65. The C65 operating system would provide a sufficient foundation for a secure mobile device, due to its simplistic architecture.  
+The overall project aim is to create a secure smartphone based on a purposely simple architecture, that is capable of basic telephony functions and simple productivity tasks.
+Where a trade-off must be made between security and richness of functions, the trade-offs will tend to the secure side.
+The sufficiently functional system’s architecture will be based on the Commodore 64 computer, to ensure that the device is secure as well as allowing its existing productivity software, tools and developer base and knowledge to be leveraged. 
+The MEGA65 project was created to develop the unreleased Commodore 65 (C65).
+Collaborators from all around the world build pieces of the puzzle.
+The recreated system is 50 times faster than the original Commodore 64 and is an exact replica of the original C65.
+The C65 operating system would provide a sufficient foundation for a secure mobile device, due to its simplistic architecture.  
 	This report will focus on the development of the PCB which will hold the circuitry for the smartphone. 
 
 
@@ -60,14 +63,17 @@ The following questions were derived to help build a foundation for the research
 
 \subsection{Design Requirements}
 
-To design a secure phone with the intentions of it being untraceable if need be, it’s underlying architecture would need to be as simplistic as possible. To ensure that the phone can remain secure at all times the following design requirements are required:
+To design a secure phone with the intentions of it being untraceable if need be, it’s underlying architecture would need to be as simplistic as possible.
+To ensure that the phone can remain secure at all times the following design requirements are required:
 \begin{itemize}
-\item Whilst the device is in secure mode, any component which can remain stable between power cycles must be disabled, so that there is no easy mechanism for the exfiltration of data from the device. This includes turning off the untrusted mobile phone modem. 
+\item Whilst the device is in secure mode, any component which can remain stable between power cycles must be disabled, so that there is no easy mechanism for the exfiltration of data from the device.
+  This includes turning off the untrusted mobile phone modem. 
 \item Only need FPGA to be powered up when needed to, so the 4G modem is required to be able to wake the FPGA if the modem is on.
 \item The FPGA needs to be able to turn off the phone radio, when it wants to.
-\item Physical manual override power switches are required that will allow the user to power down the modem. This will effectively be an Airplane mode feature. 
+\item Physical manual override power switches are required that will allow the user to power down the modem. This will effectively be a physically enforced Airplane mode feature. 
 \end{itemize}
-The modem also has a high-power consumption (approximately four amperes) that needs to be electronically switched. These objectives require research into different circuit options, including power control circuitry; and state diagrams for the transitions.
+The modem also has a high-power consumption (approximately four amperes) that needs to be electronically switched.
+These objectives require research into different circuit options, including power control circuitry; and state diagrams for the transitions.
 
 %-----------------------------------
 %	SECTION 3
@@ -77,7 +83,12 @@ The modem also has a high-power consumption (approximately four amperes) that ne
 Following this chapter, Chapter 2 provides background information on the project, including an indepth study on the insecurity of modern complex CPUs.\\ 
 \ref{Chapter3} follows this with a list of required use cases of the secure phone with a list of functional requirements based on the needs of the use cases.\\ 
 In \ref{Chapter3} a list of hardware requirements is made from the list of functional requirements.\\
-First, \ref{Chapter5} begins by giving an overview of all the schematics designed from the hardware requirements. Section 2 details the component selection and the method behind this. Section 3 gives detail of the errors in the schematic designs and how they were solved. Section 4 describes the testing phase of the project.\\
-\ref{Chapter6} describes the derivation of the PCB layout from the schematics. This chapter starts by giving details about the footprint design and the method behind them, with the second section going over the PCB layout and template of the phone, with the third section detailing the challenges found throughout the process.\\
+First, \ref{Chapter5} begins by giving an overview of all the schematics designed from the hardware requirements.
+Section 2 details the component selection and the method behind this.
+Section 3 gives detail of the errors in the schematic designs and how they were solved.
+Section 4 describes the testing phase of the project.\\
+\ref{Chapter6} describes the derivation of the PCB layout from the schematics.
+This chapter starts by giving details about the footprint design and the method behind them, with the second section going over the PCB layout and template of the phone, with the third section detailing the challenges found throughout the process.\\
 \ref{Chapter7} provides the results and discussion section of the project.\\
-Finally, the conclusion of the project is provided in \ref{Chapter8}. This summarises the project's goals and results, draws conclusions, and closes the dissertation with suggestions for further research.
+Finally, the conclusion of the project is provided in \ref{Chapter8}.
+This summarises the project's goals and results, draws conclusions, and closes the dissertation with suggestions for further research.
