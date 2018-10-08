@@ -9,7 +9,7 @@
 The PCB layout originated from early concept designs created by Paul Gardner-Stephen. This multi-layered design was used to visualise the placement of every major component within the phone. \ref{fig:Concept} displays the concept design on the top layer. 
 
 \begin{figure}
-	\includegraphics[width=\linewidth]{concept.png}
+	\includegraphics[width=\linewidth]{Figures/concept.png}
 	\caption{Initial PCB Concept}
 	\label{fig:Concept}
 \end{figure}
@@ -29,13 +29,22 @@ The PCB layout originated from early concept designs created by Paul Gardner-Ste
 	Once the schematic designs had been completed the PCB board was adjusted in Alitum to accomodate four layers. This was completed by going into Layer Stack Manager in Alitum and adding in two more signal layers. All of the schematic designs were then added into the PCB file and on top of the mockup. \ref{fig:Initial_PCB} displays one of the initial PCB layouts of the board, before the routing stage.\\
 
 \begin{figure}
-	\includegraphics[width=\linewidth]{PCB.png}
+	\includegraphics[width=\linewidth]{Figures/PCB.png}
 	\caption{Initial PCB Layout}
 	\label{fig:Initial_PCB}
 \end{figure}
 
 	It was decided near the beginning of the process that most of the ICs which would be located within the inner part of the board, would have to be positioned on the bottom layer of the board. This was needed to allow the LCD screen to lie flush with the board. It was also decided that the solder jumpers could be placed on the top side of the board below the LCD screen, as they would take up minimal height.\\
-	Once all the components were placed in their relative positions they were precisely aligned into their correct positions based upon the 
+
+\subsection{Component Placement}
+	Once all the components were placed in their relative positions they were precisely aligned into their correct positions based upon the prototype on the bench, and the concept which was made digitally. The FPGA pins were aligned first along with the connectors for both the LCD screen and the touch screen. It was essential that the large rectangular whole at the bottom of the phone was also the right width and height from the bottom of the device so that the LCD and touch ribbons would meet the connector points on the board. \ref{fig:component_placement} shows the dimensions for the touch screen connector. 
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{Figures/component_placement.png}
+	\caption{LCD Screen Dimensioning}
+	\label{fig:component_placement}
+\end{figure}
+
 \section{PCB Routing}
 
 	Before the routing stage of the board development could begin there were a number of errors which needed to be addressed. To begin, some of the footprints weren't working correctly when imported over to the PCB file. Some of these issues were solved by going back into the schematic files and making sure that all the correct footprints were in place, for every component. Another error was that 
