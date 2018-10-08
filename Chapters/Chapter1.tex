@@ -41,6 +41,8 @@ The system’s architecture will be based on the Commodore 64 computer, to ensur
 \todo{only one sentence per line in the source, please, so that source control tools are MUCH easier to use} 
   \todo{It should stay ``MEGA65'' everywhere, not ``MEGA 65'', since ``MEGA65'' is the name of the computer}
 
+\section{Designing a secure 8-bit smart-phone}
+  
 The MEGA65 project is an existing project within the Telecommunications Research Laboratory to build a Commodore 64 compatible computer, which is described in more detail in the literature review.
 Its original goal was to produce and open-source reproduction of the commercially unreleased Commodore 65 (C65)\todo{cite C65 and MEGA65}.
 Further, work has already commenced to create a portable version of the MEGA65, complete with touch-screen interface.
@@ -48,32 +50,28 @@ Thus it represents a system with a simple architecture and with full source code
 
 This thesis will therefore explore the adaption of the MEGA65 retro-computer to produce a simple and secure communications device, focusing
 on the hardware requirements, definition and realisation.
+One of the key issues to be resolved is how the untrustably complex cellular network interface module, i.e., the cellular modem, of a smart-phone can be segregated and managed, so that the security of the whole device is not compromised.
+Thus one area of focus will be how to design a device that restricts the cellular modem, and for particularly sensitive activities allows it to be deprived of power.
 
+More specifically, we posit that to create such a device that is both secure and usable, that:
+\begin{itemize}
+\item It must be able to power down the FPGA used to implement the system when idling on the cellular network, so that power consumption is similar to a conventional cellular phone.
+\item It must be able to power down any untrustable components such as the cellular modem, both under software control, and via physical switches under the control of the user of the device. This present special challenges because the cellular modem is able to draw 4A, and thus a relatively large electronic switch is required.
+\end{itemize}
 
 %-----------------------------------
 %	SECTION 3
 %-----------------------------------
 
 \section{Research Questions \& Scope}
-The following questions were derived to help build a foundation for the research:
+The recognition of the preceeding facts and situations leads this thesis to consider the following research questions:
 \begin{enumerate}
-\item What power control circuitry can satisfy the security-driven requirement of the MEGA65 to be able to power down all communications hardware when required, yet remain able to be woken by that same hardware?
-\item What trade-offs, if any, are required to satisfy the functional and dimensional requirements of the MEGA65 phone PCB?
+\item What are the core use-cases and functional requirements required to create a useful and secure communications device?
+  \item How can those functional requirements be translated into the design for a secure communications device that is feasible to be manufacturered in a University research environment?
+  \item Given the necessity to include a complex cellular modem in the design, how can that device be contained, and when necessary deprived of power?
+    \item How can the complex power management requirements of this device be met?
+  \item What trade-offs, if any, are required to satisfy the functional and dimensional requirements of the MEGA65 phone PCB, within the financial and time constraints of this project?
 \end{enumerate}
-
-\subsection{Design Requirements}
-
-To design a secure phone with the intentions of it being untraceable if need be, it’s underlying architecture would need to be as simplistic as possible.
-To ensure that the phone can remain secure at all times the following design requirements are required:
-\begin{itemize}
-\item Whilst the device is in secure mode, any component which can remain stable between power cycles must be disabled, so that there is no easy mechanism for the exfiltration of data from the device.
-  This includes turning off the untrusted mobile phone modem. 
-\item Only need FPGA to be powered up when needed to, so the 4G modem is required to be able to wake the FPGA if the modem is on.
-\item The FPGA needs to be able to turn off the phone radio, when it wants to.
-\item Physical manual override power switches are required that will allow the user to power down the modem. This will effectively be a physically enforced Airplane mode feature. 
-\end{itemize}
-The modem also has a high-power consumption (approximately four amperes) that needs to be electronically switched.
-These objectives require research into different circuit options, including power control circuitry; and state diagrams for the transitions.
 
 %-----------------------------------
 %	SECTION 3
