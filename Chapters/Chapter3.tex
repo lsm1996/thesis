@@ -10,10 +10,34 @@ This chapter gives a list of the required use cases of the secure phone. A list 
 
 	For the project a number of use cases were identified which needed to be satisfied. The following list describes the use cases and the functional requirements for which how they would be satisfied;
 
+\todo{Add a diagram here and explanation of the methodology, i.e., use-cases -> functional requirements -> component selection -> schematic layout -> PCB layout as a flow chart, and highlight the current step, and use that to explain what is in this chapter, and to remind the reader what happens in the other chapters. Explain that each use-case here is accompanied by an explanatory user story.}
+        
 \subsection{Voice telephony}
-	This basic phone requirement would require the use of both a speaker, a microphone and a SIM card slot as well as software to be able to communicate between the user and the receiver. The requirement would also needed at least one modem, possibly two if needed for overseas secure communication. In terms of software, this would require the telephony software already developed.\\
-	An example of this would be the user picking up the device and using the telephony software to call someone. They would use the touch-screen dialer to enter in a number and press call, and use the speaker in the device to hear the reciever at the other end. The user would then be able to talk back to the reciver using the microphones in the device.
-
+	This basic phone requirement would require the use of both a speaker, a microphone and a SIM card slot as well as software to be able to communicate between the user and the receiver. The requirement would also needed at least one modem, ideally two, to allow true dual-sim, dual-network operation. In terms of software, this would require the telephony software, which has already been developed.\\
+        \todo{You could include a more explicit and detailed ``user story'' for each use-case, e.g., the following:}
+        \subsubsection{User Story}
+        ``Joe picks up his MEGAphone out of his bag, presses the power button to wake it up, then uses the touch screen to select the dialer application, searches for his friend Bob in the contact list using the DPAD to quickly scan through the list, but can't find it, so manually enters his number using the dial pad on the touch screen, and presses the call button and holds the MEGAphone to his ear.  The MEGAphone establishes the call, and Bob and Joe talk with each for some time before hanging up.  Soon after, realising he forgot to tell Joe something, Bob calls Joe back, causing Joe's MEGAphone to ring.  Joe answers the call using the touch screen, puts the call on speaker-phone while writing down the information from Bob, before thanking him and hanging up.''
+        \subsubsection{Functional Requirements}
+        \begin{itemize}
+        \item MEGAphone is a portable phone-like device.
+        \item MEGAphone can operate using battery power.
+        \item MEGAphone has a power button, that when pressed wakes the device.
+        \item MEGAphone has a display.
+        \item MEGAphone has a touch-digitiser on its display.
+        \item MEGAphone has an application launcher.
+        \item MEGAphone has dialer software.
+        \item MEGAphone has a DPAD (4-way thumb joystick).
+        \item MEGAphone has a cellular modem.
+        \item MEGAphone can place cellular voice calls.
+        \item MEGAphone has a microphone.
+        \item MEGAphone has an earpiece.
+        \item MEGAphone can route audio from the microphone to cellular modem.
+        \item MEGAphone can route audio from the cellular modem to the earpiece.
+        \item MEGAphone can ring when it is called.
+        \item MEGAphone has a speaker-phone mode.
+        \end{itemize}
+        \todo{Do similar to this for the other use-cases.}  
+        
 \subsection{Text messaging}
 	Again this use case would require at least one modem and at least one SIM card slot. Again, this would also work with the telephony software already developed.\\
 	An example of this would be the user using the touch-screen on the device to type in a text message using the telephony software and find the relevant recipient in the user's contact list.
@@ -39,9 +63,9 @@ This chapter gives a list of the required use cases of the secure phone. A list 
 	An example of this would be the user wanting to transfer data or use certain data on the device. This could be done by inserting a MicroSD card into the device and using the required software to browse through the contents of the MicroSD card.
 
 
+        \section{Functional Requirements}
 
-
-
+        \todo{You completely forgot this part of this chapter. Here you should have a paragraph explaining that you now combine all the funcational requirements identified above, and group them into several categories, and deduce several other use-cases that are required to facilitate the ones identified above.}
 
 
 %----------------------------------------------------------------------------------------
