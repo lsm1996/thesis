@@ -139,19 +139,38 @@ However, if the user was able to manually turn off the phone’s connection to t
 %	SECTION 5
 %----------------------------------------------------------------------------------------
 
-\section{Secure Phones}
+\section{One Time Pad}
+        The most secure solutions rely on One Time Pad (OTP) encryption, because this is the simplest scheme that offers unconditional security \cite{shannon-otp}.
+        Unconditional security means that it does not matter how much effort an adversary may commit to breaking the security of the system, that they cannot succeed.
+        That is, if an OTP scheme is correctly applied, it is not possible for an adversary to deduce the contents of communications enciphered with it.
+        This is because each binary digit (or its equivalent, in analog systems) is enciphered using a separate key, which is never re-used.
+        It therefore follows, that if any of these one-bit keys are correctly guessed, that they provide no information about any of the other keys. Put another way, it is impossible to determine if a guess for the value of a particular key is correct.
+        Unconditionally secure systems like OTP are secure even in the face of Quantum Computing \cite{kabanov2018practical}.
+        
+        
+\section{Secure Telephony}
 
-	In the past there have been many attempts at creating a secure mobile device, however many have been unsuccessful in being able to fully remove any of the major vulnerabilities due to them still being based on complex CPUs and operating systems. 
-	An attempt to encrypt telecommunications occurred in the 1920s.
-        The encrypting device combined a “noise” signal with the audio message, effectively scrambling it, before transmission.
-        The receiver device who would know how to duplicate the “noise signal, would remove the noise to retrieve the original message \cite{RN30}.
+	In the past there have been many attempts to create secure telephony devices, with varying success \cite{RN30}.
+        Of interest to us, is SIGSALY, the first example of what was widely considered an unbreakable telephony system.
+        
 	SIGSALY was developed in 1941 as a digital speech encryption system.
-        The system used the unbreakable One-Time Pad encryption scheme, and was used heavily in World War II for confidential conversations between British Prime Minister Winston Churchill and United States President Franklin Roosevelt \cite{RN21}.
-        Although highly secure the One-Time Pad encryption scheme was expensive and in 1943, only 12 SIGSALY terminals were set up around the world \cite{RN21}.
+        The limited technology of the time meant that each unit consisted of dozens of full-height racks of equipment.
+        However, in operation, it was very similar to modern encrypted telephony:
+        The voice to be transmitted was digitised to produce a very low bit rate data stream, which was then combined using modular arithmetical with cryptographic keys to produce the encrypted output. The process was reversed at the receiving end \cite{bennett1983secret,RN21}.
 
+        The key material for SIGSALY was in the form of specially manufactured pairs of records, similar to normal music records of the era, where each digit of information was a tone representing a value between 0 and 5 \cite{bennett1983secret}.  The synchronisation required for the mechanical turn-tables was an engineering feat in itself.
+        
+        The records themeselves were produced and distributed under extremely tight controls, because as with all OTP systems, the pad material must not be intercepted by an adversary, or else the entire system will be broken.
+        Similarly, pad material must not be re-used, as otherwise it is possible to make inferences about the keymaterial, as occurred in the Verona Project, when it was realised that some OTP material had been re-used by the soviets during the second world war\cite{cohen1997venona,mcgrew2002counter}.
+
+        The SIGSALY system never suffered from the re-use of key material, as each record was carefully destroyed immediately after use,
+        and it was used heavily in the latter period of World War II for confidential conversations between British Prime Minister Winston Churchill and United States President Franklin Roosevelt \cite{RN21}.
+        The high cost of producing the records, each of which provided only twelve minutes of key material, the complications of safely transporting them to the remote ``telephones'', and the sheer size, power consumption and cost of the system meant that SIGSALY was only used for a period of four years, and only 12 SIGSALY systems were built\cite{RN21}.
+
+\todo{Cite the photo source for SIGSALY photo}        
 \begin{figure}
 	\includegraphics[width=\linewidth]{terminal.jpg}
-	\caption{The transmitting side of a SIGSALY terminal /cite{RN21}}
+	\caption{The transmitting side of a SIGSALY terminal \cite{RN21}}
 	\label{fig:SIGSALY}
 \end{figure}
 
