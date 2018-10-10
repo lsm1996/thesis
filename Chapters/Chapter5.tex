@@ -30,7 +30,7 @@ The schematic of the component was designed for the project while the footprint 
 
 \subsection{Charging Circuitry}
 
-	Parts of the schematic for the charging circuit were already completed by a student in a previous year. The schematic was checked over for errors and against the data sheet of the main component so that everything would work as expected. It was decided early on that the majority of this schematic would be completed by a professional, due to its complexity.
+	The charging circuit was designed using a ... chip connected to a MicroUSB connector. The charging circuit chip was set to be powered by the battery voltage line. The circuitry was designed following the datasheet of the IC.
 
 \subsection{Voltage Step-Up}
 
@@ -47,14 +47,17 @@ The I/O Expanders were added into the schematics to allow the device to have mor
 
 \subsection{VGA Connection}
 \label{chap:VGA}
+
 	The VGA was connected using a 15-Pin DSUB connector. A resistor ladder was used for the colour connections with the signals going straight out to the FPGA board. Resistor values of 4k, 2k and 510 Ohms were used for the ladder with two 0 Ohm resistors used for the HSYNC and VSYNC lines. The data sheet for the VGA connection was used as a basis for the signal connections. 
  
 \subsection{LCD Display}
 \label{chap:LCD}
+
 	The LCD Display schematic was connected in a similar way as the VGA connection with resistor pull-ups used for all three colour connections. The purpose of the schematic would be to provide the LCD display for the phone.
 
 \subsection{Touch Screen}
 \label{chap:touch}
+
 	The Touch Screen was added to the schematic to give the ability to the user to use their fingers for functionality, as well as the thumb-pad and buttons. 
 The Touch Screen connection was completed by powering it with VCC Screen and adding in I2C signals and an Interrupt line, going to the Signal Connections sheet.
 
@@ -64,10 +67,12 @@ The Touch Screen connection was completed by powering it with VCC Screen and add
 
 \subsection{Accelerometer}
 \label{chap:a}
+
 	The accelerometer was designed mainly through reading the recommended application layout in the data sheet of the component. Off-sheet connectors were used for the I2C signals and the Interrupt lines, as well as the three ADC lines which were used for the volume thumb wheel. The power for the component was connected to the VCC MIC power rail.
 
 \subsection{Real-Time Clock}
 \label{chap:RTC}
+
 	The schematic connections for the RTC were made by following the typical application layout given in the manufacturer's data sheet.
 
 \subsection{Proximity Sensor}
@@ -76,6 +81,7 @@ The Touch Screen connection was completed by powering it with VCC Screen and add
 
 \subsection{4G Modems}
 \label{chap:modem}
+
 	4G modems were added to the device to enable 4G internet connection. Two 4G modems were added to the schematics so that the user would have the ability to be connected to two different networks at once.
 The schematic for the 4G modem was downloaded off the internet with many of the connections also being read off the manufacturer's data sheet. 
 
@@ -97,14 +103,17 @@ The schematic for the 4G modem was downloaded off the internet with many of the 
 
 \subsection{MEMs Microphones}
 \label{chap:mics}
+
 	The two MEMs Microphones were connected by following the data sheet's guidelines. The individual data lines were sent straight to the FPGA, while the two clock lines were tied together and sent to the FPGA board. 
 
 \subsection{Headphone Audio Filter} 
 \label{chap:audio2}
+
 	The Headphone Audio Filter was created by following the design of a Sallen-Key Lowpass Filter, with two being designed. A chip containing two amplifiers was used for the design with the output of both chips being the left and right headphone audio respectively. 
 
 \subsection{Audio Power Amplifier}
 \label{chap:audio}
+
 	The schematic for the Audio Power Amplifier was completed using a number of recommended layouts found in the component's recommend layout and recommended schematics found across the internet. This schematic was designed to produce the audio for the phone. 
 
 \subsection{Digital Compass}
@@ -119,7 +128,12 @@ The circuitry for the Bluetooth module was created by following the recommend la
 
 \subsection{SIM Card Connection}
 \label{chap:SIM}
-	
+
+\subsection{MicroSD Card Slot}
+\label{chap:SD}
+
+	The MicroSD connection was created by downloading a MOLEX schematic and footprint from SnapEDA. The data, clock and chip select lines were connected to the FPGA directly with a 100k$\Omega$ pull-up resistor for every signal. The structure for the pull-up resistors was followed from a Nexys 4 DDR schematic sheet created by Digilent. 
+
 %----------------------------------------------------------------------------------------
 %	SECTION 2
 %----------------------------------------------------------------------------------------
@@ -134,7 +148,7 @@ The circuitry for the Bluetooth module was created by following the recommend la
 
 \subsection{Resistor and Capacitor Selection}
 
-It was decided early on that (where possible) that all resistors and capacitors would be 0805 sized. This would maintain the aesthetic look of the PCB, as well as reduce hassle with the order and delivery of components. 
+It was decided early on that (where possible) that all resistors and capacitors would be 0805 sized. This would maintain the aesthetic look of the PCB, as well as reduce hassle with the order and delivery of components. Most of the inductors on the board were also of 0805 size or of a similar size. 
 
 %----------------------------------------------------------------------------------------
 %	SUBSECTION 2
@@ -181,7 +195,7 @@ After discovering that the LP2951 voltage regulator wouldn't be sufficient for t
 %----------------------------------------------------------------------------------------
 
 \subsection{WiFi Module}
-\subsubsection{}
+\subsubsection{Cypress BCM43362 WiFi + ST Micro STM32F405 MCU}
 		This module was also chosen based upon research completed by other students in previous reports. Again, this module was already being used in the bench-top prototype and familiar with the software being developed for it. 
 
 %	SUBSECTION 5
@@ -198,6 +212,14 @@ After discovering that the LP2951 voltage regulator wouldn't be sufficient for t
 \subsection{LoRa Module}
 \subsubsection{RN2483 LoRa Module}
 	This module was also chosen based upon research completed by other students in previous reports.
+
+%----------------------------------------------------------------------------------------
+%	SUBSECTION 7
+%----------------------------------------------------------------------------------------
+
+\subsection{Battery Charger}
+\subsubsection{...}
+		
 
 %----------------------------------------------------------------------------------------
 %	SECTION 3
@@ -224,7 +246,7 @@ A few other small changes were made to the schematics to improve the aesthetic a
 The initial testing was started before the schematic were completed and before the design of the PCB. The first components which were tested were the voltage regulators and the flip-flops being used within the Power Control circuitry. It was vital that the correct voltage was being read out of the flip-flop to ensure that the correct pins were being wired. It was also vital that the correct lines were being shutdown if necessary so that the security of the circuitry could be verified. The circuitry was put together and tested on a small breadboard with both a resistor and a capacitor in certain positions to obtain the required voltage. Once the expected reading was achieved the circuit was copied into the schematic for the Power Control circuitry and was replicated a number of times for all the required power rails. Figure \ref{fig:power_circuit} shows the power circuit used with the smaller IC being the voltage regulator and the larger IC being the flip-flop.
 
 \begin{figure}
-	\includegraphics[width=0.5\linewidth]{powercircuit.jpg}\centering
+	\includegraphics[width=0.5\linewidth]{Figures/powercircuit.jpg}\centering
 	\caption{Image of test power circuit}
 	\label{fig:power_circuit}
 \end{figure}
