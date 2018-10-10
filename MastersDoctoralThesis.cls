@@ -363,7 +363,6 @@ KOMA-script documentation for details.}]{fancyhdr}
 			\bigskip
 			{\huge\textit{\abstractname} \par}
 			\bigskip
-			{\normalsize \facname \par}% Faculty name
 			{\normalsize \deptname \par}% Department name
 			\bigskip
 			{\normalsize \degreename\par}% Degree name
@@ -389,7 +388,6 @@ KOMA-script documentation for details.}]{fancyhdr}
 		\bigskip
 		{\huge\textit{\abstractname} \par}
 		\bigskip
-		{\normalsize \facname \par}% Faculty name
 		{\normalsize \deptname \par}% Department name
 		\bigskip
 		{\normalsize \degreename\par}% Degree name
