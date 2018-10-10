@@ -21,9 +21,9 @@ Whereas software vulnerabilities can be quickly and economically patched, this i
         This is typically done by adding in extra layers of logic, consequently increasing sophistication and complicating the system.
         The processors of these modern computers are optimised using speculative execution, which is a technique used by high-speed processors in order to increase performance by guessing future likely execution paths \cite{RN16}.
         This complexity however can be detrimental to security, because it becomes increasingly difficult and expensive to verify the correct operation of these more complicated devices.
-        This is not merely a theoretical problem: There have been a number of recent cases where vulnerabilities have been exploited, in specific the Spectre and Meltdown hardware attacks, and the Via C3 ``god mode'' bit \todo{Cite something like https://www.theregister.co.uk/2018/08/10/via\_c3\_x86\_processor\_backdoor/}.
+        This is not merely a theoretical problem: There have been a number of recent cases where vulnerabilities have been exploited, in specific the Spectre and Meltdown hardware attacks, and the Via C3 ''God mode'' bit \cite{ViaC3x865:online}.
 
-        The recent Spectre \todo{Add citation} and Meltdown \todo{add citation} vulnerabilities are headline examples of this trend and the difficulties that such vulnerabilities create.
+        The recent Spectre \cite{RN16} and Meltdown \cite{RN3} vulnerabilities are headline examples of this trend and the difficulties that such vulnerabilities create.
         Intel and the other vendors are still struggling to produce patches that do not reduce the reliability or performance of their processors, while mitigating as much of the threat posed by these vulnerabilities as possible\todo{add citation}.
         At the end of the day, the only fully effective solution is for them to develop a new generation of processors that have the defects corrected in the silicon – an extremely expensive and time-consuming process.
         Even then, it is likely that the performance of those processors will be lower, precisely because it is performance optimisations that are the direct cause of the vulnerabilities.
@@ -37,9 +37,6 @@ Where a trade-off must be made between security and richness of functions, the t
 
 The system’s architecture will be based on the Commodore 64 computer, to ensure that the device not only simple enough to be secure, but to ensure that it can be sufficiently productive. In this context, the existing productivity software, tools and developer base and knowledge to be leveraged, and also exist as a kind of proof-by-example tha the resulting system will have sufficient functionality to be useful for a variety of tasks.
 
-        
-\todo{only one sentence per line in the source, please, so that source control tools are MUCH easier to use} 
-  \todo{It should stay ``MEGA65'' everywhere, not ``MEGA 65'', since ``MEGA65'' is the name of the computer}
 
 \section{Designing a secure 8-bit smart-phone}
   
@@ -78,15 +75,21 @@ The recognition of the preceeding facts and situations leads this thesis to cons
 %-----------------------------------
 \section{Structure of Thesis}
 
-Following this chapter, Chapter 2 provides background information on the project, including an indepth study on the insecurity of modern complex CPUs.\\ 
-\ref{Chapter3} follows this with a list of required use cases of the secure phone with a list of functional requirements based on the needs of the use cases.\\ 
-In \ref{Chapter3} a list of hardware requirements is made from the list of functional requirements.\\
-First, \ref{Chapter5} begins by giving an overview of all the schematics designed from the hardware requirements.
+Following this chapter, Chapter \ref{Chapter2} provides background information on the project, including an indepth study on the insecurity of modern complex CPUs.\\ 
+Chapter \ref{Chapter3} follows this with a list of required use cases of the secure phone with a list of functional requirements based on the needs of the use cases.\\ 
+In Chapter \ref{Chapter3} a list of hardware requirements is made from the list of functional requirements.\\
+First, Chapter \ref{Chapter5} begins by giving an overview of all the schematics designed from the hardware requirements.
 Section 2 details the component selection and the method behind this.
 Section 3 gives detail of the errors in the schematic designs and how they were solved.
 Section 4 describes the testing phase of the project.\\
-\ref{Chapter6} describes the derivation of the PCB layout from the schematics.
+Chapter \ref{Chapter6} describes the derivation of the PCB layout from the schematics.
 This chapter starts by giving details about the footprint design and the method behind them, with the second section going over the PCB layout and template of the phone, with the third section detailing the challenges found throughout the process.\\
-\ref{Chapter7} provides the results and discussion section of the project.\\
-Finally, the conclusion of the project is provided in \ref{Chapter8}.
+Chapter \ref{Chapter7} provides the results and discussion section of the project.\\
+Finally, the conclusion of the project is provided in Chapter \ref{Chapter8}.
 This summarises the project's goals and results, draws conclusions, and closes the dissertation with suggestions for further research.
+
+\begin{figure}
+	\includegraphics[width=0.5\linewidth]{Figures/first_table.pdf}\centering
+	\caption{Design Process}
+	\label{fig:methodology}
+\end{figure}
