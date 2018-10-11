@@ -5,13 +5,14 @@
 \label{Chapter2} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
 This chapter provides background information on the reasoning behind the secure phone project.
-This consists of: (1) an introduction into the state of complex modern processors; (2) a brief history of computer processors; (3) a study into the verification of CPUs, which includes a graph detailing the large rise in the number of transistors per employee per new processor released; (4) security vulnerabilities, which looks at cases where vulnerabilities have been found or are imminent; (5) secure phones, which looks at the history of past secure devices and technologies; (6) a brief overview of the MEGA 65 project; (7) a description of the design software used for the project.\\
+This consists of: (\ref{chap2sec1}) an introduction into the state of complex modern processors; (\ref{chap2sec2}) a brief history of computer processors; (\ref{chap2sec3}) a study into the verification of CPUs, which includes a graph detailing the large rise in the number of transistors per employee per new processor released; (\ref{chap2sec4}) security vulnerabilities, which looks at cases where vulnerabilities have been found or are imminent; (\ref{chap2sec5}) a brief overview of One Time Pad; (\ref{chap2sec6}) secure phones, which looks at the history of past secure devices and technologies; (\ref{chap2sec7}) a brief overview of the MEGA 65 project; (\ref{chap2sec8}) a description of the design software used for the project.\\
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 
 \section{Literature Review}
+\label{chap2sec1}
 
 Since the beginning of modern pipelined microprocessors, computers have become increasingly complex.
 This complexity can bring about vulnerabilities deep within the software and hardware of a computer.
@@ -29,6 +30,7 @@ This literature review explores this space, summarising a brief history of CPUs,
 %----------------------------------------------------------------------------------------
 
 \section{A Brief History of Computer Processors}
+\label{chap2sec2}
 
 To begin delving into the complexity of modern processors, a look back into the history of computer processors can provide reasoning for the secure smartphone project. 
 In 1968, the Intel Corporation was founded by Robert Noyce and Gordon Moore \cite{RN2}.
@@ -54,7 +56,7 @@ Many computers today still contain fundamental aspects of the 8086 chip \cite{RN
 When the Motorola 68000 was released in 1980 it was one of the most powerful chips on the market \cite{RN18}.
 With 68,000 transistors the chip was predominately used in the Apple Macintosh, Sun UNIX work stations, the Commodore Amiga line of computers, printers and video game consoles \cite{RN18}. 
 In early 1993 Intel introduced the Pentium processor.
-With 3.1 million transistors  (Intel, N/A)\todo{Fix this citation} the processor was the first to incorporate Intel’s super-scalar design.
+With 3.1 million transistors  \cite{RN13, Intel4584:online} the processor was the first to incorporate Intel’s super-scalar design.
 Intel made large sacrifices of performance, power consumption and cost for the sake of maintaining the compatibility with legacy x86 code \cite{RN13}.
 Intel estimated that 30\% of the Pentium’s transistors were used solely for providing x86 legacy support \cite{RN7}.
 For this reason the processor lagged behind it’s RISC competitors in performance, while being more complex in its design.
@@ -74,6 +76,7 @@ The latest Intel processor errata documents are longer than the entire operation
 %----------------------------------------------------------------------------------------
 
 \section{Verification of CPUs / Formal Analysis}
+\label{chap2sec3}
 
 One of the major issues manufacturers of modern computers face is functional verification.
 In 2001 ARM released that their method of verifying their CPUs, so that the highest possible verification coverage could be achieved, was a process called ‘deterministic simulation’ \cite{RN6}.
@@ -107,6 +110,7 @@ Many of the problems found within the hardware can require a full re-design of t
 %----------------------------------------------------------------------------------------
 
 \section{Security Vulnerabilities}
+\label{chap2sec4}
 
 In parallel with the rise of the number of transistors in a CPU there has also been a rise in the number of vulnerabilities and areas in which the CPU can be manipulated.
 The number of reported software and hardware vulnerabilities grows constantly, with an approximate doubling rate beginning in 2017 \cite{RN17}.
@@ -140,6 +144,8 @@ However, if the user was able to manually turn off the phone’s connection to t
 %----------------------------------------------------------------------------------------
 
 \section{One Time Pad}
+\label{chap2sec5}
+
         The most secure solutions rely on One Time Pad (OTP) encryption, because this is the simplest scheme that offers unconditional security \cite{shannon-otp}.
         Unconditional security means that it does not matter how much effort an adversary may commit to breaking the security of the system, that they cannot succeed.
         That is, if an OTP scheme is correctly applied, it is not possible for an adversary to deduce the contents of communications enciphered with it.
@@ -147,8 +153,12 @@ However, if the user was able to manually turn off the phone’s connection to t
         It therefore follows, that if any of these one-bit keys are correctly guessed, that they provide no information about any of the other keys. Put another way, it is impossible to determine if a guess for the value of a particular key is correct.
         Unconditionally secure systems like OTP are secure even in the face of Quantum Computing \cite{kabanov2018practical}.
         
-        
+%----------------------------------------------------------------------------------------
+%	SECTION 6
+%----------------------------------------------------------------------------------------
+
 \section{Secure Telephony}
+\label{chap2sec6}
 
 	In the past there have been many attempts to create secure telephony devices, with varying success \cite{RN30}.
         Of interest to us, is SIGSALY, the first example of what was widely considered an unbreakable telephony system.
@@ -185,10 +195,11 @@ The devices however are still based around a modern complex CPU and hence still 
 	It can be seen from the past that as the CPU in smartphones becomes more complex the ability to be able to secure it effectively decreases. 
 
 %----------------------------------------------------------------------------------------
-%	SECTION 6
+%	SECTION 7
 %----------------------------------------------------------------------------------------
 
 \section{MEGA 65 Project}
+\label{chap2sec7}
 
 The MEGA 65 Project is a joint venture of the Resilient Telecommunications Laboratory at Flinders University and the German based MEGA team and a number of volunteer contributors to bring to life the Commodore 65, the unreleased improvement over the Commodore 64 computer.
 The MEGA 65 CPU is an enhanced 4502 8-bit processor, non-pipelined with no branch-prediction and no cache.
@@ -218,6 +229,7 @@ One of the major challenges in making the device fully secure, is ensuring that 
 %----------------------------------------------------------------------------------------
 
 \section{Design Software}
+\label{chap2sec8}
 
 Altium Designer is a software-based schematic and PCB design program.
 The software has the ability to create complex designs, of any nature – accurately.
