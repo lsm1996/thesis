@@ -3,17 +3,31 @@
 \chapter{Derivation of Hardware Requirements from Functional Requirements} % Main chapter title
 \label{Chapter4} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
-\begin{figure}[!htb]
-	\includegraphics[width=0.5\linewidth]{Figures/requirements.pdf}\centering
-	\label{fig:requirements}
-\end{figure}
+\AddToShipoutPicture*{\HardwareRequirements}
 
-%----------------------------------------------------------------------------------------
+\begin{parcolumns}[colwidths={1=.6\textwidth},rulebetween=false]{2}
+\colchunk{% left column
 This section describes the hardware requirements based upon the list of functional requirements derived in the previous chapter.
 
 \section{Hardware Requirements}
 
-The following list displays the functional requirements for the device, with them being crucial for the completion of the project. Each requirement has been noted with the corresponding schematic which can be found in the next section.
+The following lists summarise the functional requirements for the device. That is, the functions that are crucial for the completion of the project.
+These have been group according to three major subsystems: (1) power management; (2) switches and connectors; and (3) on-board modules and peripheral devices.
+Power management includes the circuitry that allows the FPGA to be switched off when the phone is in standby, and yet be woken when required, e.g., on an incoming phone call or time of day alarm.  Switches and connectors are simply that, the components that provide physical connection to the outside world, while the on board modules and peripheral devices covers the remaining components.
+
+Schematics for the hardware that provides the functionality for each requirement are found in Chatper \ref{Chapter 5}.
+}
+\colchunk{
+  }
+\end{parcolumns}
+\newpage
+
+%\begin{figure}[!htb]
+%	\includegraphics[width=0.5\linewidth]{Figures/requirements.pdf}\centering
+%	\label{fig:requirements}
+%\end{figure}
+
+%----------------------------------------------------------------------------------------
 
 \subsection{Power Control Requirements}
 The following requirements are related to the Power Control schematic, which can be found in \autoref{chap:batt}.

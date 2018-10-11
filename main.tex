@@ -38,7 +38,6 @@ headsepline, % Uncomment to get a line under the header
 %consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
 ]{MastersDoctoralThesis} % The class file specifying the document structure
 
-\usepackage{afterpage}
 \usepackage{eso-pic} % Required for adding in background images
 %\usepackage[dvips]{geometry} % Tells 'dvips' and 'pdfTeX' the papersize
 \usepackage[utf8]{inputenc} % Required for inputting international characters
@@ -47,6 +46,10 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{mathpazo} % Use the Palatino font by default
 \usepackage{todonotes}
 \usepackage{menukeys}
+\usepackage{microtype}
+\usepackage{parcolumns}
+\usepackage{xcolor}
+\usepackage{xpatch}
 %\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 
 %\addbibresource{reference_library.bib} % The filename of the bibliography
@@ -91,11 +94,19 @@ headsepline, % Uncomment to get a line under the header
 }
 
 \newcommand\UseCase{%
-   \put(350,-50){%
+   \put(350,-70){%
      \parbox[b][\paperheight]{\paperwidth}{%
        \vfill
        \includegraphics[width=0.5\paperwidth,height=0.5\paperheight,%
                         keepaspectratio]{Figures/usecases.pdf}%
+       \vfill
+}}}
+\newcommand\HardwareRequirements{%
+   \put(350,-110){%
+     \parbox[b][\paperheight]{\paperwidth}{%
+       \vfill
+       \includegraphics[width=0.5\paperwidth,height=0.5\paperheight,%
+                        keepaspectratio]{Figures/requirements.pdf}%
        \vfill
 }}}
  %The picture is centered on the page background

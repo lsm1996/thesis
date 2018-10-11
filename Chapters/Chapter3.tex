@@ -3,12 +3,10 @@
 
 \label{Chapter3} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
-\newgeometry{outer=9cm, top=1.5cm}
-\afterpage{\restoregeometry}
-
 \AddToShipoutPicture*{\UseCase}
 
-%----------------------------------------------------------------------------------------
+\begin{parcolumns}[colwidths={1=.6\textwidth},rulebetween=false]{2}
+\colchunk{% left column
 This chapter gives a list of the required use cases of the secure phone. A list of functional requirements has then been created based upon the needs of the use cases. 
 
 \section{Use Cases}
@@ -17,6 +15,14 @@ This chapter gives a list of the required use cases of the secure phone. A list 
 
 \subsection{Voice telephony}
 	This basic phone requirement would require the use of both a speaker, a microphone and a SIM card slot as well as software to be able to communicate between the user and the receiver. The requirement would also needed at least one modem, ideally two, to allow true dual-sim, dual-network operation. In terms of software, this would require the telephony software, which has already been developed.\\
+
+}
+\colchunk{% right column
+}
+\end{parcolumns}
+
+
+%----------------------------------------------------------------------------------------
 
         \subsubsection{User Story}
         ''Joe picks up his MEGAphone out of his bag, presses the power button to wake it up, then uses the touch screen to select the dialer application, searches for his friend Bob in the contact list using the DPAD to quickly scan through the list, but can't find it, so manually enters his number using the dial pad on the touch screen, and presses the call button and holds the MEGAphone to his ear.  The MEGAphone establishes the call, and Bob and Joe talk with each for some time before hanging up.  Soon after, realising he forgot to tell Joe something, Bob calls Joe back, causing Joe's MEGAphone to ring.  Joe answers the call using the touch screen, puts the call on speaker-phone while writing down the information from Bob, before thanking him and hanging up.''
