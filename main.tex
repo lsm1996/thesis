@@ -109,7 +109,23 @@ headsepline, % Uncomment to get a line under the header
                         keepaspectratio]{Figures/requirements.pdf}%
        \vfill
 }}}
- %The picture is centered on the page background
+\newcommand\CircuitDesign{%
+   \put(350,-90){%
+     \parbox[b][\paperheight]{\paperwidth}{%
+       \vfill
+       \includegraphics[width=0.5\paperwidth,height=0.5\paperheight,%
+                        keepaspectratio]{Figures/circuit_design_table.pdf}%
+       \vfill
+}}}
+\newcommand\SchematicLayout{%
+   \put(350,-55){%
+     \parbox[b][\paperheight]{\paperwidth}{%
+       \vfill
+       \includegraphics[width=0.5\paperwidth,height=0.5\paperheight,%
+                        keepaspectratio]{Figures/layout_table.pdf}%
+       \vfill
+}}}
+
 
 
 \begin{document}

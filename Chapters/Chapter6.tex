@@ -4,13 +4,19 @@
 
 \label{Chapter6} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
-\begin{figure}[!htb]
-	\includegraphics[width=0.5\linewidth]{Figures/layout_table.pdf}\centering
-	\label{fig:layout}
-\end{figure}
+\AddToShipoutPicture*{\SchematicLayout}
+
+\begin{parcolumns}[colwidths={1=.6\textwidth},rulebetween=false]{2}
+\colchunk{% left column
 
 %----------------------------------------------------------------------------------------
 	This section provides a detailed overview of the process and findings of the circuit designs to create the schematic designs, as well as the derivation of the PCB from the schematic designs. This includes: (\ref{chap6sec1} the schematic design errors and (\ref{chap6sec2}) testing, (\ref{chap6sec3}) PCB concept drawings, (\ref{chap6sec4}) the PCB footprint design, (\ref{chap6sec5}) the layout of the PCB, (\ref{chap6sec6}) the routing of the PCB and (\ref{chap6sec7}) any major challenges which were faced.\\
+
+}
+\colchunk{% right column
+}
+\end{parcolumns}
+\newpage
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1

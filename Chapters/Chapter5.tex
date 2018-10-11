@@ -3,17 +3,13 @@
 \chapter{Component Selection \& Circuit Design} % Main chapter title
 \label{Chapter5} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-\begin{figure}[!htb]
-	\includegraphics[width=0.5\linewidth]{Figures/circuit_design_table.pdf}\centering
-	\label{fig:circuit_design}
-\end{figure}
+\AddToShipoutPicture*{\CircuitDesign}
+
+\begin{parcolumns}[colwidths={1=.6\textwidth},rulebetween=false]{2}
+\colchunk{% left column
 
 This chapter provides a detail description and insight into the derivation of the circuit design on the hardware requirements. 
 This includes: (\ref{chap5sec1}) component selection, where for all the major components the method behind choosing the component is given; and (\ref{chap5sec2}) the circuit design, this section describes the method behind the circuit design for each of the various segments of the PCB. 
-
-%----------------------------------------------------------------------------------------
-%	SECTION 1
-%----------------------------------------------------------------------------------------
 
 \section{Component Selection} 
 \label{chap5sec1}
@@ -21,6 +17,17 @@ This includes: (\ref{chap5sec1}) component selection, where for all the major co
 	This section describes the major components selected for the phone, note that some components were chosen based of previous student research.  
 This process was completed before the circuit design was performed. 
 This also includes other components which were compared and tested so that the optimal solution would be found. 
+
+}
+\colchunk{% right column
+}
+\end{parcolumns}
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
 
 %----------------------------------------------------------------------------------------
 %	SUBSECTION 1
