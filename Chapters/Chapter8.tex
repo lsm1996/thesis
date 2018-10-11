@@ -4,25 +4,24 @@
 
 \label{Chapter8} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
-	After completing the project it was found that the research questions had been answered to the point that the functional and hardware requirements had been defined and the power control circuitry had been completed. This project involved a lot of research in finding suitable components that work well with other components in the device in terms of the current and voltages being produced. Planning was also vital during the project, with a lot of the signal connections and how all the components were to be connected together thought out in the beginning stage of the project. The project's schematics were produced along with the correct component PCB footprints and a template design for the PCB was also produced. It was found that the main routing stage of the PCB was highly complex especially with the aims of having a six-layered board. \\
-	Further research in the project could be made in designing the PCB board, and researching better, more suitable components for the required tasks. \\
+	Upon completion of the project it was quite apparent that the research questions had been answered. An evaluation of the completed works showed that the functional and hardware requirements had been defined and the power control circuitry had been completed. During this project extensive research was required in order to find components that seamlessly integrated with existing hardware of the device. Some considerations when selecting a potential component included the current and voltage that the component operated at. In addition to component research, well evaluated plans were vital during the project. These plans allowed the wide range of components to be connected and interconnected clearly and concisely during the initial design stages of the project. Over the course of the project three major deliverables were produced, they include, the various schematics of the phone's subsystems, the PCB footprints for the components used in the phone and a template PCB design. During the attempts to route the template PCB, it was discovered that the aim of designing a six layered PCB was non-trivial.\\
+	In the consequent works to this document, a high priority should be placed on improving the template PCB through improved board layout, more suited component selection and template PCB routing. \\
 
-	After completing the project it was found that the main goals of discovering the functional and hardware requirements to design a secure phone device was accomplished. The components required to design such a device were found with adequate reasoning as to why they were chosen, with their schematic and PCB footprint designs created in Altium. The following paragraphs summate the findings found throughout the project.\\
+	After completion of the project it was clear that the main goals had been accomplished, as the functional and hardware design requirements to create a secure phone had indeed been discerned. The components required to design such a device were identified and, with adequate reasoning, evaluated as to why they were chosen. These components then had their schematic and PCB footprint designs created in Altium. The following paragraphs summate the findings found throughout the project.\\
 
-	At the beginning of the project research questions were devised to help guide the development of the project. The following paragraphs describe the research questions and detail the results of following the research questions and whether or not they have been accomplished.\\
+	During the initial stages of the project, research questions were devised to help guide the development of the project. The following paragraphs describe the research questions and detail the results obtained, identifying whether or not they have been accomplished.\\
 
 \begin{enumerate}
 \item \textit{What are the core use cases and functional requirements required to create a useful and secure communications device?}\\
 
 	The core use cases and functional requirements were developed in Chapter \ref{Chapter3}. 
-These use cases involved the basic telephony functions of the phone, and how a user would utilise the phone to complete certain tasks. 
+These use cases included the basic telephony functions of the phone, and how a user would utilise the phone to complete certain tasks. 
 The functional requirements, which came about through identifying the needs in the use cases, lead to the development of the hardware requirements, which in turn lead to the creation of a concept design of a secure communications device.\\
 
 \item \textit{How can those functional requirements be translated into the design for a secure communications device that is feasible to be manufactured in a University research environment?}\\
 
-	The functional requirements lead to the foundation of the hardware requirements, which in turn lead to the component selection phase. 
-All of the components were selected based on their feasibility to be able to soldered at the University.
-Some suitable components were rejected due to the way they're soldered.\\
+	As described, the functional requirements lead to the foundation of the hardware requirements. This, in turn, lead to the component selection phase during which, all of the components were selected based on their availability to be able to locally assembled.
+During the component selection phase, some suitable components were rejected, this was due to not being feasible for assembly.\\
 
 \item \textit{Given the necessity to include a complex cellular modem in the design, how can that device be contained, and when necessary deprived of power?}\\
 
@@ -30,17 +29,16 @@ Some suitable components were rejected due to the way they're soldered.\\
 
 \item \textit{How can the complex power management requirements of this device be met?}\\
 
-	This major research question was solved through the schematic design of the power control circuitry. 
-This involved researching a method for the power control to work, with various components requiring different current needs. 
-This also involved searching for a suitable component, with a number of suitable components found and compared to find the optimal component. The goal to be able to design the circuit so that all communications could be powered down and powered up by the same hardware was completed, without the PCB fully completed. This also involved testing the required components to see that the powering down was occurring.\\
+	During the schematic design of the power control circuitry, much research was done into a method for the power control to work, with its various components requiring different current needs. 
+This also involved searching for a component suitable for the design requirements, with a number of suitable components found and compared. This involved testing the required components to see that the powering down was, in fact, occurring and resulted in an optimal component selection. Thus, the goal of being able to design the circuit so that all communications could be powered down and powered up by the same hardware yielded success.\\
 	
 \item \textit{What trade-offs, if any, are required to satisfy the functional and dimensional requirements of the MEGA65 phone PCB, within the financial and time constraints of this project?}\\
 
-	While designing the PCB it was found that some of the components, for example the Smart Card Connector, were quite large. 
-This caused some hassle with the placements of components and the spacing around certain components. 
-Due to the first revision of the phone being quite large, every desired component was able to be placed within the confines of the PCB. 
-However, due to the large scale of components, some components may need to be replaced in future iterations of the device to endure that EMI and other signal interference are reduced.
-In terms of the functional requirements of the MEGA65 phone, all the major components were placed in their approximate locations based on the concept drawn which can be found in Figure \ref{fig:nopcb}. The 50-pin headers, LCD connector and Touch Screen connector were all placed in their exact positions to ensure that the FPGA would fit comfortably and that the screen would align.\\
+	During design of the PCB it was found that some of the components, for example the Smart Card Connector, were quite large. 
+This required that greater attention be paid with regards to the placement of components and the spacing around critical components. 
+Thanks to relaxed constraints on the first revision of the phone allowing it to be quite large, every desired component was able to be placed within the confines of the PCB. 
+However, due to the large scale of components, some replacements may need to be further researched in future iterations of the device. This would enable it to operate with reduced EMI and other signal interference.
+In terms of the functional requirements of the MEGA65 phone, all the major components were placed in their approximate locations based on the concept drawing as displayed in Figure \ref{fig:nopcb}. The 50-pin headers, LCD connector and Touch Screen connector were all placed in their exact positions to ensure that the FPGA would fit comfortably and that the screen would align.\\
 
 \end{enumerate}
 %----------------------------------------------------------------------------------------
