@@ -90,6 +90,17 @@ headsepline, % Uncomment to get a line under the header
 \hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
 }
 
+\newcommand\UseCase{%
+   \put(350,-50){%
+     \parbox[b][\paperheight]{\paperwidth}{%
+       \vfill
+       \includegraphics[width=0.5\paperwidth,height=0.5\paperheight,%
+                        keepaspectratio]{Figures/usecases.pdf}%
+       \vfill
+}}}
+ %The picture is centered on the page background
+
+
 \begin{document}
 
 \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages

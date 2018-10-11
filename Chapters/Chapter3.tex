@@ -3,25 +3,10 @@
 
 \label{Chapter3} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
-\begin{figure}[!htb]
-	\includegraphics[width=0.5\linewidth]{Figures/usecases.pdf}\centering
-	\label{fig:usecases}
-\end{figure}
+\newgeometry{outer=9cm, top=1.5cm}
+\afterpage{\restoregeometry}
 
-%\newgeometry{inner=4cm, top=1.5cm}
-%\afterpage{\restoregeometry}
-%
-%\newcommand\BackgroundPicture{%
-%   \put(0,0){%
-%     \parbox[b][\paperheight]{\paperwidth}{%
-%       \vfill
-%       \includegraphics[width=0.5\paperwidth,height=0.5\paperheight,%
-%                        keepaspectratio]{Figures/usecases.pdf}%
-%       \vfill
-%}}}
-% The picture is centered on the page background
-%
-%\AddToShipoutPicture{\BackgroundPicture}
+\AddToShipoutPicture*{\UseCase}
 
 %----------------------------------------------------------------------------------------
 This chapter gives a list of the required use cases of the secure phone. A list of functional requirements has then been created based upon the needs of the use cases. 
