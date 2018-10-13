@@ -4,17 +4,18 @@
 
 \label{Chapter7} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
-\section{Introduction}
+This section discusses the results found in both the development of the schematic designs and the PCB layout and  how they were implemented, as well as; (\ref{chap7sec1}) any challenges and errors that were faced, (\ref{chap7sec2})whether or not the use cases were satisfied, (\ref{chap7sec3}) whether or not the research questions were answered and (\ref{chap7sec4}) any potential future work than can be undertaken.
 
 \section{Implementation Challenges}
+\label{chap7sec1}
 
 	Throughout the schematic design stage of the process there were a number of challenges encountered with the compiling stage. 
 As stated in Chapter \ref{chap6sec1} there were as many as 900 errors which stemmed from incorrect connections, an entire lack of connections at all, no driving source or connecting an input or output line to a voltage line. 
-Many of these errors were trivial and were solved in a number of hours, however some of the trickier problems to solve took a number of days.\todo{Give examples of tricky problem. Then rewrite next sentence to flow. Such as (These problems caused the components they affected, such as the XXX, to be left until the end of the project.)}
-During this stage some of the more complex components to implement were left to the end.\\
+Many of these errors were trivial and were solved in a number of hours, however some of the trickier problems to solve took a number of days.
+Some components had many input and output terminals which had to be connected to voltage lines, which sometimes lead to the schematics of these components being changed, or them being left till the end to be completed.\\
 
 	The PCB design stage also had a number of issues, many to do with component footprints. 
-When the design was imported from the schematics it was found that there were a few components which were neglected during the initial schematic design. This resulted in parts such as the XXX\todo{Insert forgotten part name}, had yet to have a footprint attached to it. 
+When the design was imported from the schematics it was found that there were a few components which were neglected during the initial schematic design. This resulted in parts such as the APDS 9130 (the proximity sensor), had yet to have a footprint attached to it. 
 In most cases, the footprint was easily created or downloaded, however in some cases the footprints required more work due to the increased number of pins or the angles required on the footprint. 
 There was also a challenge in the routing stage of the project, with the large number of components causing difficulty in placing them in their correct positions. These placements were vital as it would ensure that the signal interference would be minimised. 
 An additional issue due to the large number of components and the small area of the printed circuit board was the routing itself. 
@@ -27,6 +28,7 @@ It was also found that less than 10 of the almost 900 connections were unable to
 %----------------------------------------------------------------------------------------
 
 \section{Satisfaction of Use-Cases}
+\label{chap7sec2}
 % Did we satisfy the use-cases identified?
 
 	The use cases, as seen in Chapter \ref{Chapter3}, were discussed in detail and formed the functional requirements of the phone, which in turn lead to the hardware requirements. 
@@ -34,6 +36,7 @@ The use cases covered all of the functional aspects of the phone for the first r
 Other use cases may be developed in further iterations of the device. 
 
 \section{Answering the Research Questions}
+\label{chap7sec3}
 % Did we answer the research questions?
 % Were there any that we didn't answer, but should have?
 % (This can be a longer exploration of these compared to what should go in the conclusion chapter,
@@ -82,10 +85,13 @@ The 50-pin headers, LCD connector and Touch Screen connector were all placed in 
 
 %% Place this section at the end
 \section{Future Work}
+\label{chap7sec4}
 % What was left undone?
 % What should we have done?
 
-	After completing the bulk of the project it was found that some of the component placing could be tidied up to reduce EMI and other forms of signal interference. This along with researching for possibly more suited components, could potentially be future work for future revisions of the phone. 
+	After completing the bulk of the project it was found that some of the component placing could be tidied up to reduce EMI and other forms of signal interference. 
+A very minute number of errors still remained in the design at the completion of the project, and these errors would be solved in the future.
+These along with researching for possibly more suited components, as well as researching methods of a casing for the phone, could potentially be future work for future revisions of the phone. 
 
 
 
