@@ -181,6 +181,17 @@ To begin, some of the footprints weren't working correctly when imported over to
 Some of these issues were solved by going back into the schematic files and making sure that all the correct footprints were in place, for every component. 
 Another error was that there were multiple component footprints which broke the minimum track width rules. 
 This was fixed by changing the track width rule settings and not include component footprints.
+	To begin the routing stage of the process the rules for the PCB were defined in Altium. 
+Initially the track widths and clearances were set to 0.152mm, as the lowest cheap option that can be implemented by PCBWay, and the number of layers was set to four. 
+Due to the vast majority of components and sizes of some of the pads, many errors were produced concerning the minimum track widths and clearances. 
+Also when routed, there were also around 160 components which were left un-routed due to the lack of space with four layers. 
+This process was again tried with six layers but again the program failed to rout every component correctly. 
+Finally, the track widths and clearances were set to the lowest possible dimensions able to be produced by PCBWay, this was 0.1mm. 
+The number of layers on the board was also changed to eight. 
+This was found to be a very expensive route for developing the board, however there were little alternatives based on the level of PCB experience. 
+After completing the routing stage it was found that less than 10 connections were unable to be routed.\\
+A ground plane was established within the top part of the board above the large hole, once the routing was complete. \\
+
 
 %----------------------------------------------------------------------------------------
 %	SECTION 7
