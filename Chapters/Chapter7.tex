@@ -17,6 +17,9 @@ During this stage some of the more complex components to implement were left to 
 When the design was imported from the schematics it was found that there were a few components which were yet to have a footprint attached to it. 
 In most cases, the footprint was easily created or downloaded, however in some cases the footprints required more work due to the number of pins or the angles required on the footprint. 
 There was also a challenge in the routing stage of the process with the large scale of components causing difficulty in placing the components in their correct positions so that signal interferences would be reduced. 
+Due to the large number of components and the small area of the device, there were also issues with the routing. 
+Originally, the board was set to be routed using four signal layers, however the program failed to rout on this many layers.
+The number of layers was then changed to six so that all the routing could be successfully completed. 
 All of the ICs were placed in their correct positions, however some of the resistors and capacitors could have been placed better to reduced interference. \\
 
 % Talk about the parts of the schematic or PCB which were not implemented
@@ -26,7 +29,7 @@ All of the ICs were placed in their correct positions, however some of the resis
 % Did we satisfy the use-cases identified?
 
 	The use cases as discussed in Chapter \ref{Chapter3}, were discussed in detail and formed the functional requirements of the phone, which in turn lead to the hardware requirements. 
-The use cases covered all of the functional aspects of the phone for the first revision.
+The use cases covered all of the functional aspects of the phone for the first revision, with most of them covering the telephony functions of the phone.
 Other use cases may be developed in further iterations of the device. 
 
 \section{Answering the Research Questions}
