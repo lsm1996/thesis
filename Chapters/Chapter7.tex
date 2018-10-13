@@ -9,18 +9,18 @@
 \section{Implementation Challenges}
 
 	Throughout the schematic design stage of the process there were a number of challenges encountered with the compiling stage. 
-As stated in Chapter \ref{chap6sec1} there were as many as 900 errors which stemmed from incorrect connections or connections that weren't properly connected, there being no driving source or connecting an input or output line to a voltage line. 
-Many of these errors were trivial and were solved in a number of hours, however some of the trickier problems to solve took a number of days. 
+As stated in Chapter \ref{chap6sec1} there were as many as 900 errors which stemmed from incorrect connections, an entire lack of connections at all, no driving source or connecting an input or output line to a voltage line. 
+Many of these errors were trivial and were solved in a number of hours, however some of the trickier problems to solve took a number of days.\todo{Give examples of tricky problem. Then rewrite next sentence to flow. Such as (These problems caused the components they affected, such as the XXX, to be left until the end of the project.)}
 During this stage some of the more complex components to implement were left to the end.\\
 
 	The PCB design stage also had a number of issues, many to do with component footprints. 
-When the design was imported from the schematics it was found that there were a few components which were yet to have a footprint attached to it. 
-In most cases, the footprint was easily created or downloaded, however in some cases the footprints required more work due to the number of pins or the angles required on the footprint. 
-There was also a challenge in the routing stage of the process with the large scale of components causing difficulty in placing the components in their correct positions so that signal interferences would be reduced. 
-Due to the large number of components and the small area of the device, there were also issues with the routing. 
-Originally, the board was set to be routed using four signal layers, however the program failed to rout on this many layers.
-The number of layers was then changed to six so that all the routing could be successfully completed. 
-All of the ICs were placed in their correct positions, however some of the resistors and capacitors could have been placed better to reduced interference. 
+When the design was imported from the schematics it was found that there were a few components which were neglected during the initial schematic design. This resulted in parts such as the XXX\todo{Insert forgotten part name}, had yet to have a footprint attached to it. 
+In most cases, the footprint was easily created or downloaded, however in some cases the footprints required more work due to the increased number of pins or the angles required on the footprint. 
+There was also a challenge in the routing stage of the project, with the large number of components causing difficulty in placing them in their correct positions. These placements were vital as it would ensure that the signal interference would be minimised. 
+An additional issue due to the large number of components and the small area of the printed circuit board was the routing itself. 
+Originally, the board was set to be routed using four layers of copper, however the Altium auto-routing program failed to make all the connections necessary.
+As described in Chapter \ref{Chapter6}, the number of layers was eventually changed to eight so that all the routing could be successfully completed. 
+All of the ICs were placed in their correct positions, however when placing the resistors and capacitors no great care was taken to ensure they reduced signal interference. 
 It was also found that less than 10 of the almost 900 connections were unable to be connected due to reasons which were very hard to solve.\\
 
 % Talk about the parts of the schematic or PCB which were not implemented
@@ -29,7 +29,7 @@ It was also found that less than 10 of the almost 900 connections were unable to
 \section{Satisfaction of Use-Cases}
 % Did we satisfy the use-cases identified?
 
-	The use cases as discussed in Chapter \ref{Chapter3}, were discussed in detail and formed the functional requirements of the phone, which in turn lead to the hardware requirements. 
+	The use cases, as seen in Chapter \ref{Chapter3}, were discussed in detail and formed the functional requirements of the phone, which in turn lead to the hardware requirements. 
 The use cases covered all of the functional aspects of the phone for the first revision, with most of them covering the telephony functions of the phone.
 Other use cases may be developed in further iterations of the device. 
 
