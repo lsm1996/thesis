@@ -8,14 +8,27 @@
 \section{Introduction}
 
 \section{Implementation Challenges}
-%----------------------------------------------------------------------------------------
-% Add in section about challenges faced and errors found during the schematic and PCB design stages.
-% Talk about the parts of the schematic or PCB which were not implemented
-% 
 
+	Throughout the schematic design stage of the process there were a number of challenges encountered with the compiling stage. 
+As stated in Chapter \ref{chap6sec1} there were as many as 900 errors which stemmed from incorrect connections or connections that weren't properly connected, there being no driving source or connecting an input or output line to a voltage line. 
+Many of these errors were trivial and were solved in a number of hours, however some of the trickier problems to solve took a number of days. 
+During this stage some of the more complex components to implement were left to the end.\\
+
+	The PCB design stage also had a number of issues, many to do with component footprints. 
+When the design was imported from the schematics it was found that there were a few components which were yet to have a footprint attached to it. 
+In most cases, the footprint was easily created or downloaded, however in some cases the footprints required more work due to the number of pins or the angles required on the footprint. 
+There was also a challenge in the routing stage of the process with the large scale of components causing difficulty in placing the components in their correct positions so that signal interferences would be reduced. 
+All of the ICs were placed in their correct positions, however some of the resistors and capacitors could have been placed better to reduced interference. \\
+
+% Talk about the parts of the schematic or PCB which were not implemented
 %----------------------------------------------------------------------------------------
+
 \section{Satisfaction of Use-Cases}
 % Did we satisfy the use-cases identified?
+
+	The use cases as discussed in Chapter \ref{Chapter3}, were discussed in detail and formed the functional requirements of the phone, which in turn lead to the hardware requirements. 
+The use cases covered all of the functional aspects of the phone for the first revision.
+Other use cases may be developed in further iterations of the device. 
 
 \section{Answering the Research Questions}
 % Did we answer the research questions?
@@ -24,11 +37,52 @@
 %  which will just be a short summary of each, indicating whether it was answered, and what the
 % answer was).
 
+During the initial stages of the project, research questions were devised to help guide the development of the project.
+The following paragraphs describe the research questions and detail the results obtained, identifying whether or not they have been accomplished.\\
+
+\begin{enumerate}
+\item \textit{What are the core use cases and functional requirements required to create a useful and secure communications device?}\\
+
+	The core use cases and functional requirements were developed in Chapter \ref{Chapter3}. 
+These use cases included the basic telephony functions of the phone, and how a user would utilise the phone to complete certain tasks. 
+The functional requirements, which came about through identifying the needs in the use cases, lead to the development of the hardware requirements, which in turn lead to the creation of a concept design of a secure communications device.\\
+
+\item \textit{How can those functional requirements be translated into the design for a secure communications device that is feasible to be manufactured in a University research environment?}\\
+
+	As described, the functional requirements lead to the foundation of the hardware requirements. This, in turn, lead to the component selection phase during which, all of the components were selected based on their availability to be able to locally assembled.
+During the component selection phase, some suitable components were rejected, this was due to not being feasible for assembly.\\
+
+\item \textit{Given the necessity to include a complex cellular modem in the design, how can that device be contained, and when necessary deprived of power?}\\
+
+	The power control of the cellular modem was incorporated into the power control circuitry. 
+The development of the power control circuitry came about through developing a number of block diagrams which detailed and displayed the process being completed in the circuit, so that the modem would be deprived of power when required. 
+The diagram process was directly mapped to the circuit design and schematic. Parts of the circuit were also tested in the laboratory to ensure that the circuitry would work correctly. \\
+
+\item \textit{How can the complex power management requirements of this device be met?}\\
+
+	During the schematic design of the power control circuitry, much research was done into a method for the power control to work, with its various components requiring different current needs. 
+This also involved searching for a component suitable for the design requirements, with a number of suitable components found and compared. 
+This involved testing the required components to see that the powering down was, in fact, occurring and resulted in an optimal component selection. 
+Thus, the goal of being able to design the circuit so that all communications could be powered down and powered up by the same hardware yielded success.\\
+	
+\item \textit{What trade-offs, if any, are required to satisfy the functional and dimensional requirements of the MEGA65 phone PCB, within the financial and time constraints of this project?}\\
+
+	During design of the PCB it was found that some of the components, for example the Smart Card Connector, were quite large. 
+This required that greater attention be paid with regards to the placement of components and the spacing around critical components. 
+Thanks to relaxed constraints on the first revision of the phone allowing it to be quite large, every desired component was able to be placed within the confines of the PCB. 
+However, due to the large scale of components, some replacements may need to be further researched in future iterations of the device. 
+This would enable it to operate with reduced EMI and other signal interference.
+In terms of the functional requirements of the MEGA65 phone, all the major components were placed in their approximate locations based on the concept drawing as displayed in Figure \ref{fig:nopcb}. 
+The 50-pin headers, LCD connector and Touch Screen connector were all placed in their exact positions to ensure that the FPGA would fit comfortably and that the screen would align.\\
+
+\end{enumerate}
 
 %% Place this section at the end
 \section{Future Work}
 % What was left undone?
 % What should we have done?
+
+	After completing the bulk of the project it was found that some of the component placing could be tidied up to reduce EMI and other forms of signal interference. This along with researching for possibly more suited componenets, could potentially be future work for future revisions of the phone. 
 
 
 
