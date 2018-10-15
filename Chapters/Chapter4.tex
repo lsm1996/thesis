@@ -11,7 +11,7 @@ This section describes the hardware requirements based upon the list of function
 
 \section{Hardware Requirements}
 
-The following lists summarise the functional requirements for the device. That is, the functions that are crucial for the completion of the project.
+The following lists summarise the hardware requirements for the device. That is, the components that are crucial for the functional requirements.
 These have been group according to three major subsystems: (1) power management; (2) switches and connectors; and (3) on-board modules and peripheral devices.
 Power management includes the circuitry that allows the FPGA to be switched off when the phone is in standby, and yet be woken when required, e.g., on an incoming phone call or time of day alarm.  Switches and connectors are simply that, the components that provide physical connection to the outside world, while the on board modules and peripheral devices covers the remaining components.
 
@@ -26,6 +26,7 @@ Schematics for the hardware that provides the functionality for each requirement
 
 \subsection{Power Control Requirements}
 The following requirements are related to the Power Control schematic, which can be found in \autoref{chap:batt}.
+Most requirements stem from \ref{funqreq}.\ref{item:portphone}, \ref{funqreq}.\ref{item:batt}, \ref{funqreq}.\ref{item:power} \& \ref{funqreq}.\ref{item:cell}.
 \begin{enumerate}
 \item Powered with a single-cell LiFePO4 battery.
 \item Controlled output from single-cell LiFePO4 battery. 
@@ -43,6 +44,7 @@ The following requirements are related to the Power Control schematic, which can
 \end{enumerate}
 
 \subsection{Connectors and Switches}
+Most requirements stem from \ref{funqreq}.\ref{item:SD} \& \ref{funqreq}.\ref{item:wheel}.
 \begin{enumerate}
 \item VGA connector providing video output with at least 4-bits colour depth per channel (see \autoref{chap:VGA}).
 \item WiFi module interconnection with the FPGA via UART interface.
@@ -54,6 +56,7 @@ The following requirements are related to the Power Control schematic, which can
 \end{enumerate}
 
 \subsection{Peripheral Devices}
+Most requirements stem from \ref{funqreq}.\ref{item:digitiser}, \ref{funqreq}.\ref{item:launcher}, \ref{funqreq}.\ref{item:dialer}, \ref{funqreq}.\ref{item:DPAD}, \ref{funqreq}.\ref{item:wheel}, \ref{funqreq}.\ref{item:speaker}, \ref{funqreq}.\ref{item:key} \& \ref{funqreq}.\ref{item:text}.
 \begin{enumerate}
 \item Real-Time Clock IC to maintain time and date when switched off, and to set alarms (see \autoref{chap:RTC}).
 \item 4 Microphones (see \autoref{chap:mics}).
@@ -67,6 +70,12 @@ The following requirements are related to the Power Control schematic, which can
 \item LCD capacitive touch digitiser via I2C to FPGA board (see \autoref{chap:touch}).
 \item Accelerometer connected via I2C to FPGA board (see \autoref{chap:a}).
 \item 4 SIM card sockets connected to 4G module via SIM MUX ICs (see \autoref{chap:SIM}).
+\end{enumerate}
+
+\subsection{Highly-secure Communication}
+Requirements stem from \ref{funqreq}.\ref{item:OTP} \& \ref{funqreq}.\ref{item:NOR}.
+\begin{enumerate}
+\item OTP encryption to allow the user to securely communicate with other users with pads.
 \end{enumerate}
 
 %----------------------------------------------------------------------------------------
