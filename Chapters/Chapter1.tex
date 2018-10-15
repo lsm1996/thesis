@@ -17,18 +17,18 @@ This chapter concludes with a brief outline of the remainder of this thesis.
 
 The last few years has seen a disturbing upward trend in the number and severity of security vulnerabilities in modern computing devices.
 Whereas traditionally these security vulnerabilities have existed primarily in software, the ever-growing complexity of computer hardware, and in particular CPU designs, now means that we are beginning to see many more hardware-based vulnerabilities.
-Indeed, the complexity of the {\em errata} for a modern processor is now often longer\cite{6thGener70:online} than the entire specification of early generation processors \cite{mos6500m32:online}.
-Whereas software vulnerabilities can be quickly and economically patched, this is not always the case for hardware-based vulnerabilities, as it may require replacement of the defective hardware\cite{WillHuge39:online}.  
-It also means that when a fix is issued, that there will likely be hundreds of millions of devices that remain incurably vulnerable for the remainder of their lives \cite{Intellef1:online}.
+Indeed, the complexity of the {\em errata} for a modern processor is now often longer\citep{6thGener70:online} than the entire specification of early generation processors \citep{mos6500m32:online}.
+Whereas software vulnerabilities can be quickly and economically patched, this is not always the case for hardware-based vulnerabilities, as it may require replacement of the defective hardware\citep{WillHuge39:online}.  
+It also means that when a fix is issued, that there will likely be hundreds of millions of devices that remain incurably vulnerable for the remainder of their lives \citep{Intellef1:online}.
 
         Modern computers are designed to achieve increasing performance and functionality through the easiest route.
         This is typically done by adding in extra layers of logic, consequently increasing sophistication and complicating the system.
-        The processors of these modern computers are optimised using speculative execution, which is a technique used by high-speed processors in order to increase performance by guessing future likely execution paths \cite{RN16}.
+        The processors of these modern computers are optimised using speculative execution, which is a technique used by high-speed processors in order to increase performance by guessing future likely execution paths \citep{RN16}.
         This complexity however can be detrimental to security, because it becomes increasingly difficult and expensive to verify the correct operation of these more complicated devices.
-        This is not merely a theoretical problem: There have been a number of recent cases where vulnerabilities have been exploited, in specific the Spectre and Meltdown hardware attacks, and the Via C3 ''God mode'' bit \cite{ViaC3x865:online}.
+        This is not merely a theoretical problem: There have been a number of recent cases where vulnerabilities have been exploited, in specific the Spectre and Meltdown hardware attacks, and the Via C3 ''God mode'' bit \citep{ViaC3x865:online}.
 
-        The recent Spectre \cite{RN16} and Meltdown \cite{RN3} vulnerabilities are headline examples of this trend and the difficulties that such vulnerabilities create.
-        Intel and the other vendors are still struggling to produce patches that do not reduce the reliability or performance of their processors, while mitigating as much of the threat posed by these vulnerabilities as possible \cite{Ifatfirs66:online}.
+        The recent Spectre \citep{RN16} and Meltdown \citep{RN3} vulnerabilities are headline examples of this trend and the difficulties that such vulnerabilities create.
+        Intel and the other vendors are still struggling to produce patches that do not reduce the reliability or performance of their processors, while mitigating as much of the threat posed by these vulnerabilities as possible \citep{Ifatfirs66:online}.
         At the end of the day, the only fully effective solution is for them to develop a new generation of processors that have the defects corrected in the silicon – an extremely expensive and time-consuming process.
         Even then, it is likely that the performance of those processors will be lower, precisely because it is performance optimisations that are the direct cause of the vulnerabilities.
         Even if processors are created that correct these known issues, they too could be found to suffer from one or more hitherto unknown vulnerabilities, and themselves require replacement.
@@ -47,7 +47,7 @@ In this context, the existing productivity software, tools and developer base an
 \label{sec2}
 
 The MEGA65 project is an existing project within the Telecommunications Research Laboratory to build a Commodore 64 compatible computer, which is described in more detail in the literature review.
-Its original goal was to produce an open-source reproduction of the commercially unreleased Commodore 65 (C65) \cite{MEGA65MO64:online}.
+Its original goal was to produce an open-source reproduction of the commercially unreleased Commodore 65 (C65) \citep{MEGA65MO64:online}.
 Further, work has already commenced to create a portable version of the MEGA65, complete with touch-screen interface.
 Thus, it represents a system with a simple architecture and with full source code availability, which can be used within this thesis as the basis for the creation of a simple and secure communications device.
 

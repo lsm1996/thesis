@@ -111,7 +111,7 @@ There were a few components where the datasheet was unavailable and hence the fo
 The following list describes the footprints which were created without a datasheet, and how they were created;
 
 \begin{itemize}
-\item The footprints for the silicon moulds for the push buttons were designed in Altium using a pre-existing official footprint used for the design of the Nintendo Gameboy. 
+\item The footprints for the silicon moulds for the push buttons were designed in Altium using a pre-existing official footprint used for the design of the Nintendo GameBoy. 
 This larger footprint was modified into the separate components of the DPAD buttons, the blue push buttons and the rectangular black push buttons.
 \item The footprint for the modem connector was created by measuring the dimensions of the physical component. 
 This connection part was then added to the recommended PCB layout of the modem, which was created from the datasheet. 
@@ -124,18 +124,18 @@ This connection part was then added to the recommended PCB layout of the modem, 
 \section{PCB Layout}
 \label{chap6sec5}
 
-	The start of the PCB Design process begun with a graphical editor being used to create a mockup of the MEGA65 phone. 
-This mockup included precise measurements of the height and width of the device as well as the location of all of the major components required for the device, including the FPGA pins and the 4G Modems. 
-The mockup was used as the template for the PCB board with all of the measurements copied into the program. \\
-	Once the schematic designs had been completed the PCB board was adjusted in Alitum to accomodate four layers. 
+	The start of the PCB Design process begun with a graphical editor being used to create a mock-up of the MEGA65 phone. 
+This mock-up included precise measurements of the height and width of the device as well as the location of all of the major components required for the device, including the FPGA pins and the 4G Modems. 
+The mock-up was used as the template for the PCB board with all of the measurements copied into the program. \\
+	Once the schematic designs had been completed the PCB board was adjusted in Alitum to accommodate four layers. 
 This was completed by going into Layer Stack Manager in Alitum and adding in two more signal layers. 
-All of the schematic designs were then added into the PCB file and on top of the mockup. \\
-The next stage of the process involved using the mockup (Figure \ref{fig:nopcb}) to place the required components in their suitable positions. 
-This process took a while to complete as some components were required to be realigned or moved to a completly different position. 
+All of the schematic designs were then added into the PCB file and on top of the mock-up. \\
+The next stage of the process involved using the mock-up (Figure \ref{fig:nopcb}) to place the required components in their suitable positions. 
+This process took a while to complete as some components were required to be realigned or moved to a completely different position. 
 Some component footprints also had small positioning holes, which interfered with components in the same position on the opposite side of the board. 
 This also required realignment of a number of components. 
 Figure \ref{fig:Initial_PCB} displays one of the initial PCB layouts of the board, before the routing stage. 
-Note that this early design doesn't include a lot of the components, nor most of them are not in thieir correct positions.\\
+Note that this early design doesn't include a lot of the components, nor most of them are not in their correct positions.\\
 
 \begin{figure}
 	\includegraphics[width=\linewidth]{Figures/PCB.png}
@@ -204,7 +204,7 @@ Figures \ref{PCB_top} and \ref{PCB_bottom} display the front and back of the PCB
 \label{chap6sec7}
 
 	There were a number of challenges with designing the PCB board, mainly to do with the vast majority of components needed to be routed. 
-Another challenge was discovered in the fact that the aim was to have a six-layered board, which in itselt is highly sophiscated. 
+Another challenge was discovered in the fact that the aim was to have a six-layered board, which in itself is highly sophisticated. 
 It was decided early on that the majority of the tricky PCB routing and design would be completed by a professional PCB designer in Germany.\\
 Another challenge was found in working out the dimensions of the PCB as well as the component placement. 
 Due to the size requirements of the board there was not a lot of room to spare with many components sitting flush with one another and required precise measurements to fit. \\
