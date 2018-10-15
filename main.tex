@@ -38,6 +38,7 @@ headsepline, % Uncomment to get a line under the header
 %consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
 ]{MastersDoctoralThesis} % The class file specifying the document structure
 
+\usepackage{natbib}
 \usepackage{eso-pic} % Required for adding in background images
 %\usepackage[dvips]{geometry} % Tells 'dvips' and 'pdfTeX' the papersize
 \usepackage[utf8]{inputenc} % Required for inputting international characters
@@ -253,13 +254,21 @@ From the completion of this thesis I have gained a lot of wisdom from a number o
 
 \begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
 
+\textbf{ADC} & \textbf{A}nalog-to-\textbf{D}igital \textbf{C}onverter\\
 \textbf{CPU} & \textbf{C}omputer \textbf{P}rocessing \textbf{U}nit\\
+\textbf{FPGA} & \textbf{F}ield-\textbf{P}rogrammable \textbf{G}ate \textbf{A}rray\\
+\textbf{GPIO} & \textbf{G}eneral \textbf{P}urpose \textbf{I}nput \textbf{O}utput\\
 \textbf{I2C} & \textbf{I}nter-integrated \textbf{C}ircuit\\
 \textbf{IC} & \textbf{I}ntegrated \textbf{C}ircuit\\
+\textbf{LiFePO4} & \textbf{L}ithium \textbf{I}ron \textbf{P}hosphate\\
+\textbf{LTE} & \textbf{L}ong-\textbf{T}erm \textbf{E}volution\\
 \textbf{OTP} & \textbf{O}ne \textbf{T}ime \textbf{P}ad\\
 \textbf{PCB} & \textbf{P}rinted \textbf{C}ircuit \textbf{B}oard\\
-\textbf{SD} & \textbf{S}ecure \textbf{D}igital \\
+\textbf{PCM} & \textbf{P}ulse \textbf{C}ode \textbf{M}odulation\\
+\textbf{SD} & \textbf{S}ecure \textbf{D}igital\\
 \textbf{SIM} & \textbf{S}ubscriber \textbf{I}dentity \textbf{M}odule\\
+\textbf{UART} & \textbf{U}niversal \textbf{A}synchronous \textbf{R}eceiver-\textbf{T}ransmitter\\
+\textbf{VGA} & \textbf{V}ideo \textbf{G}raphics \textbf{A}rray\\
 
 \end{abbreviations}
 
@@ -299,7 +308,8 @@ From the completion of this thesis I have gained a lot of wisdom from a number o
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
-\bibliographystyle{ieeetr}
+%\bibliographystyle{ieeetr} %ieee format referencing
+\bibliographystyle{agsm}
 \bibliography{reference_library}
 
 %----------------------------------------------------------------------------------------
