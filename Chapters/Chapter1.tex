@@ -39,7 +39,7 @@ The overall project aim is to create a secure smartphone based on a purposely si
 Where a trade-off must be made between security and richness of functions, the trade-offs will usually tend towards security.
 
 
-The system’s architecture will be based on the Commodore 64 computer, to ensure that the device not only simple enough to be secure, but to ensure that it can be sufficiently productive.
+The system’s architecture will be based on the Commodore 64 computer, to ensure that the device is not only simple enough to be secure, but to ensure that it can be sufficiently productive.
 In this context, the existing productivity software, tools and developer base and knowledge to be leveraged, and also exist as a kind of proof-by-example that the resulting system will have sufficient functionality to be useful for a variety of tasks.
 
 
@@ -47,19 +47,19 @@ In this context, the existing productivity software, tools and developer base an
 \label{sec2}
 
 The MEGA65 project is an existing project within the Telecommunications Research Laboratory to build a Commodore 64 compatible computer, which is described in more detail in the literature review.
-Its original goal was to produce and open-source reproduction of the commercially unreleased Commodore 65 (C65) \cite{MEGA65MO64:online}.
+Its original goal was to produce an open-source reproduction of the commercially unreleased Commodore 65 (C65) \cite{MEGA65MO64:online}.
 Further, work has already commenced to create a portable version of the MEGA65, complete with touch-screen interface.
-Thus it represents a system with a simple architecture and with full source code availability, which can be used within this thesis as the basis for the creation of a simple and secure communications device.
+Thus, it represents a system with a simple architecture and with full source code availability, which can be used within this thesis as the basis for the creation of a simple and secure communications device.
 
 This thesis will therefore explore the adaption of the MEGA65 retro-computer to produce a simple and secure communications device, focusing
 on the hardware requirements, definition and realisation.
-One of the key issues to be resolved is how the untrustably complex cellular network interface module, i.e., the cellular modem, of a smart-phone can be segregated and managed, so that the security of the whole device is not compromised.
+One of the key issues to be resolved is how the untrustable complex cellular network interface module, i.e., the cellular modem, of a smart-phone can be segregated and managed, so that the security of the whole device is not compromised.
 Thus one area of focus will be how to design a device that restricts the cellular modem, and for particularly sensitive activities allows it to be deprived of power.
 
 More specifically, we posit that to create such a device that is both secure and usable, that:
 \begin{itemize}
-	\item It must be able to power down the FPGA used to implement the system when idling on the cellular network, so that power consumption is similar to a conventional cellular phone.\\
-	\item It must be able to power down any untrustable components such as the cellular modem, both under software control, and via physical switches under the control of the user of the device. This present special challenges because the cellular modem is able to draw 4A, and thus a relatively large electronic switch is required.\\
+	\item It must be able to power down the FPGA used to implement the system when idling on the cellular network, so that power consumption is similar to a conventional cellular phone.
+	\item It must be able to power down any untrustable components such as the cellular modem, both under software control, and via physical switches under the control of the user of the device. This presents special challenges because the cellular modem is able to draw 4A, and thus a relatively large electronic switch is required.
 \end{itemize}
 
 %-----------------------------------
@@ -71,11 +71,11 @@ More specifically, we posit that to create such a device that is both secure and
 
 The recognition of the preceeding facts and situations leads this thesis to consider the following research questions:
 \begin{enumerate}
-	\item \textit{What are the core use cases and functional requirements required to create a useful and secure communications device?}\\
-	\item \textit{How can those functional requirements be translated into the design for a secure communications device that is feasible to be manufactured in a University research environment?}\\
-	\item \textit{Given the necessity to include a complex cellular modem in the design, how can that device be contained, and when necessary deprived of power?}\\
-	\item \textit{How can the complex power management requirements of this device be met?}\\
-	\item \textit{What trade-offs, if any, are required to satisfy the functional and dimensional requirements of the MEGA65 phone PCB, within the financial and time constraints of this project?}\\
+	\item \textit{What are the core use cases and functional requirements required to create a useful and secure communications device?}
+	\item \textit{How can those functional requirements be translated into the design for a secure communications device that is feasible to be manufactured in a University research environment?}
+	\item \textit{Given the necessity to include a complex cellular modem in the design, how can that device be contained, and when necessary deprived of power?}
+	\item \textit{How can the complex power management requirements of this device be met?}
+	\item \textit{What trade-offs, if any, are required to satisfy the functional and dimensional requirements of the MEGA65 phone PCB, within the financial and time constraints of this project?}
 \end{enumerate}
 
 %-----------------------------------
@@ -86,9 +86,9 @@ The recognition of the preceeding facts and situations leads this thesis to cons
 Following this chapter, Chapter \ref{Chapter2} provides background information on the project, including an indepth study on the insecurity of modern complex CPUs.\\ 
 Chapter \ref{Chapter3} follows this with a list of required use cases of the secure phone, accompanied with a use story for each use case.
 The functional requirements derived from each use case has then been compiled into one functional requirements list.\\ 
-In Chapter \ref{Chapter3} a list of hardware requirements is derived from the list of functional requirements.\\
+In Chapter \ref{Chapter3}, a list of hardware requirements is derived from the list of functional requirements.\\
 Chapter \ref{Chapter5} gives an overview of the component selection and circuit design. 
-This includes the method and selection process behind all the major components as well as the method and ideology behind all the circuit designs.\\
+This includes the selection process behind all the major components as well as the method and ideology behind all the circuit designs.\\
 Chapter \ref{Chapter6} describes the schematic layout from the circuit design, moving into the PCB layout from the schematic design.
 This section details errors and challenges found during the schematic design process, as well as the method behind the PCB layout and any errors and challenges found during the PCB layout stage.\\
 Chapter \ref{Chapter7} provides the discussion of the project, which details the major implemention challenges of both the schematic and PCB stages, and answers the research questions based on the results of the project.\\
